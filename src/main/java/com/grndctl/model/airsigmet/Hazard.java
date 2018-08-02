@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -64,7 +64,7 @@ public class Hazard {
     protected String severity;
 
     /**
-     * Gets the value of the type property.
+     * Gets the fromString of the type property.
      *
      * @return possible object is {@link String }
      *
@@ -74,7 +74,7 @@ public class Hazard {
     }
 
     /**
-     * Sets the value of the type property.
+     * Sets the fromString of the type property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -85,7 +85,7 @@ public class Hazard {
     }
 
     /**
-     * Gets the value of the severity property.
+     * Gets the fromString of the severity property.
      *
      * @return possible object is {@link String }
      *
@@ -95,7 +95,7 @@ public class Hazard {
     }
 
     /**
-     * Sets the value of the severity property.
+     * Sets the fromString of the severity property.
      *
      * @param value
      *            allowed object is {@link String }

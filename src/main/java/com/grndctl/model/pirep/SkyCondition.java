@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public class SkyCondition {
     protected Integer cloudTopFtMsl;
 
     /**
-     * Gets the value of the skyCover property.
+     * Gets the fromString of the skyCover property.
      *
      * @return possible object is {@link String }
      *
@@ -77,7 +77,7 @@ public class SkyCondition {
     }
 
     /**
-     * Sets the value of the skyCover property.
+     * Sets the fromString of the skyCover property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -88,7 +88,7 @@ public class SkyCondition {
     }
 
     /**
-     * Gets the value of the cloudBaseFtMsl property.
+     * Gets the fromString of the cloudBaseFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -98,7 +98,7 @@ public class SkyCondition {
     }
 
     /**
-     * Sets the value of the cloudBaseFtMsl property.
+     * Sets the fromString of the cloudBaseFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -109,7 +109,7 @@ public class SkyCondition {
     }
 
     /**
-     * Gets the value of the cloudTopFtMsl property.
+     * Gets the fromString of the cloudTopFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -119,7 +119,7 @@ public class SkyCondition {
     }
 
     /**
-     * Sets the value of the cloudTopFtMsl property.
+     * Sets the fromString of the cloudTopFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }

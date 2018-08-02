@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,7 @@ public class TurbulenceCondition {
     protected String turbulenceFreq;
 
     /**
-     * Gets the value of the turbulenceType property.
+     * Gets the fromString of the turbulenceType property.
      *
      * @return possible object is {@link String }
      *
@@ -83,7 +83,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceType property.
+     * Sets the fromString of the turbulenceType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -94,7 +94,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceIntensity property.
+     * Gets the fromString of the turbulenceIntensity property.
      *
      * @return possible object is {@link String }
      *
@@ -104,7 +104,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceIntensity property.
+     * Sets the fromString of the turbulenceIntensity property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -115,7 +115,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceBaseFtMsl property.
+     * Gets the fromString of the turbulenceBaseFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -125,7 +125,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceBaseFtMsl property.
+     * Sets the fromString of the turbulenceBaseFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -136,7 +136,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceTopFtMsl property.
+     * Gets the fromString of the turbulenceTopFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -146,7 +146,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceTopFtMsl property.
+     * Sets the fromString of the turbulenceTopFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -157,7 +157,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceFreq property.
+     * Gets the fromString of the turbulenceFreq property.
      *
      * @return possible object is {@link String }
      *
@@ -167,7 +167,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceFreq property.
+     * Sets the fromString of the turbulenceFreq property.
      *
      * @param value
      *            allowed object is {@link String }

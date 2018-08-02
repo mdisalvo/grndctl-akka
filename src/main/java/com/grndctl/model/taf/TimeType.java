@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +23,10 @@
  */
 package com.grndctl.model.taf;
 
+import scala.Option;
+
+import java.util.Objects;
+
 /**
  * <p>
  * Possible time type parameters for retrieving a {@link TAF}.
@@ -42,6 +46,17 @@ public enum TimeType {
 
     public String valueOf() {
         return value;
+    }
+
+    public static Option<TimeType> fromString(String value) {
+        TimeType val = null;
+        for (TimeType t : TimeType.values()) {
+            if (t.value.equals(value)) {
+                val = t;
+                break;
+            }
+        }
+        return Option.apply(val);
     }
 
 }

@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +23,8 @@
  */
 package com.grndctl.model.aircraftrep;
 
+import scala.Option;
+
 /**
  *
  */
@@ -41,18 +43,16 @@ public enum ReportType {
         return val;
     }
 
-    public static ReportType fromString(String val) {
-        ReportType[] types = ReportType.values();
-
+    public static Option<ReportType> fromString(String val) {
         ReportType rt = null;
-        for (ReportType type : types) {
+        for (ReportType type : ReportType.values()) {
             if (type.toString().equals(val)) {
                 rt = type;
                 break;
             }
         }
 
-        return rt;
+        return Option.apply(rt);
     }
 
 }

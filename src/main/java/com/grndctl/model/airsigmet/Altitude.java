@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -64,7 +64,7 @@ public class Altitude {
     protected Integer maxFtMsl;
 
     /**
-     * Gets the value of the minFtMsl property.
+     * Gets the fromString of the minFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -74,7 +74,7 @@ public class Altitude {
     }
 
     /**
-     * Sets the value of the minFtMsl property.
+     * Sets the fromString of the minFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -85,7 +85,7 @@ public class Altitude {
     }
 
     /**
-     * Gets the value of the maxFtMsl property.
+     * Gets the fromString of the maxFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -95,7 +95,7 @@ public class Altitude {
     }
 
     /**
-     * Sets the value of the maxFtMsl property.
+     * Sets the fromString of the maxFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }

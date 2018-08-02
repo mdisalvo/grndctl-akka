@@ -3,3 +3,6 @@
 .dist/*
 target/
 .idea
+.ensime*
+ensime-langserver.log
+pc.stdout.log

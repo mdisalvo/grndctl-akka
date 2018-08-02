@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -65,7 +65,7 @@ public class Errors {
     protected String error;
 
     /**
-     * Gets the value of the error property.
+     * Gets the fromString of the error property.
      *
      * @return possible object is {@link String }
      *
@@ -75,7 +75,7 @@ public class Errors {
     }
 
     /**
-     * Sets the value of the error property.
+     * Sets the fromString of the error property.
      *
      * @param value
      *            allowed object is {@link String }

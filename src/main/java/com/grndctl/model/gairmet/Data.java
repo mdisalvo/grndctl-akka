@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ public class Data {
     protected Integer numResults;
 
     /**
-     * Gets the value of the gairmet property.
+     * Gets the fromString of the gairmet property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -97,7 +97,7 @@ public class Data {
     }
 
     /**
-     * Gets the value of the numResults property.
+     * Gets the fromString of the numResults property.
      *
      * @return possible object is {@link Integer }
      *
@@ -107,7 +107,7 @@ public class Data {
     }
 
     /**
-     * Sets the value of the numResults property.
+     * Sets the fromString of the numResults property.
      *
      * @param value
      *            allowed object is {@link Integer }

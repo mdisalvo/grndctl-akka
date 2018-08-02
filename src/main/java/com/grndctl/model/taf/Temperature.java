@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,7 @@ public class Temperature {
     protected String minTempC;
 
     /**
-     * Gets the value of the validTime property.
+     * Gets the fromString of the validTime property.
      *
      * @return possible object is {@link String }
      *
@@ -83,7 +83,7 @@ public class Temperature {
     }
 
     /**
-     * Sets the value of the validTime property.
+     * Sets the fromString of the validTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -94,7 +94,7 @@ public class Temperature {
     }
 
     /**
-     * Gets the value of the sfcTempC property.
+     * Gets the fromString of the sfcTempC property.
      *
      * @return possible object is {@link Float }
      *
@@ -104,7 +104,7 @@ public class Temperature {
     }
 
     /**
-     * Sets the value of the sfcTempC property.
+     * Sets the fromString of the sfcTempC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -115,7 +115,7 @@ public class Temperature {
     }
 
     /**
-     * Gets the value of the maxTempC property.
+     * Gets the fromString of the maxTempC property.
      *
      * @return possible object is {@link String }
      *
@@ -125,7 +125,7 @@ public class Temperature {
     }
 
     /**
-     * Sets the value of the maxTempC property.
+     * Sets the fromString of the maxTempC property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -136,7 +136,7 @@ public class Temperature {
     }
 
     /**
-     * Gets the value of the minTempC property.
+     * Gets the fromString of the minTempC property.
      *
      * @return possible object is {@link String }
      *
@@ -146,7 +146,7 @@ public class Temperature {
     }
 
     /**
-     * Sets the value of the minTempC property.
+     * Sets the fromString of the minTempC property.
      *
      * @param value
      *            allowed object is {@link String }

@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -125,7 +125,7 @@ public class Forecast {
     protected List<Temperature> temperature;
 
     /**
-     * Gets the value of the fcstTimeFrom property.
+     * Gets the fromString of the fcstTimeFrom property.
      *
      * @return possible object is {@link String }
      *
@@ -135,7 +135,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the fcstTimeFrom property.
+     * Sets the fromString of the fcstTimeFrom property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -146,7 +146,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the fcstTimeTo property.
+     * Gets the fromString of the fcstTimeTo property.
      *
      * @return possible object is {@link String }
      *
@@ -156,7 +156,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the fcstTimeTo property.
+     * Sets the fromString of the fcstTimeTo property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -167,7 +167,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the changeIndicator property.
+     * Gets the fromString of the changeIndicator property.
      *
      * @return possible object is {@link String }
      *
@@ -177,7 +177,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the changeIndicator property.
+     * Sets the fromString of the changeIndicator property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -188,7 +188,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the timeBecoming property.
+     * Gets the fromString of the timeBecoming property.
      *
      * @return possible object is {@link String }
      *
@@ -198,7 +198,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the timeBecoming property.
+     * Sets the fromString of the timeBecoming property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -209,7 +209,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the probability property.
+     * Gets the fromString of the probability property.
      *
      * @return possible object is {@link Integer }
      *
@@ -219,7 +219,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the probability property.
+     * Sets the fromString of the probability property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -230,7 +230,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windDirDegrees property.
+     * Gets the fromString of the windDirDegrees property.
      *
      * @return possible object is {@link Short }
      *
@@ -240,7 +240,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windDirDegrees property.
+     * Sets the fromString of the windDirDegrees property.
      *
      * @param value
      *            allowed object is {@link Short }
@@ -251,7 +251,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windSpeedKt property.
+     * Gets the fromString of the windSpeedKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -261,7 +261,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windSpeedKt property.
+     * Sets the fromString of the windSpeedKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -272,7 +272,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windGustKt property.
+     * Gets the fromString of the windGustKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -282,7 +282,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windGustKt property.
+     * Sets the fromString of the windGustKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -293,7 +293,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windShearHgtFtAgl property.
+     * Gets the fromString of the windShearHgtFtAgl property.
      *
      * @return possible object is {@link Short }
      *
@@ -303,7 +303,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windShearHgtFtAgl property.
+     * Sets the fromString of the windShearHgtFtAgl property.
      *
      * @param value
      *            allowed object is {@link Short }
@@ -314,7 +314,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windShearDirDegrees property.
+     * Gets the fromString of the windShearDirDegrees property.
      *
      * @return possible object is {@link Short }
      *
@@ -324,7 +324,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windShearDirDegrees property.
+     * Sets the fromString of the windShearDirDegrees property.
      *
      * @param value
      *            allowed object is {@link Short }
@@ -335,7 +335,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the windShearSpeedKt property.
+     * Gets the fromString of the windShearSpeedKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -345,7 +345,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the windShearSpeedKt property.
+     * Sets the fromString of the windShearSpeedKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -356,7 +356,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the visibilityStatuteMi property.
+     * Gets the fromString of the visibilityStatuteMi property.
      *
      * @return possible object is {@link Float }
      *
@@ -366,7 +366,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the visibilityStatuteMi property.
+     * Sets the fromString of the visibilityStatuteMi property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -377,7 +377,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the altimInHg property.
+     * Gets the fromString of the altimInHg property.
      *
      * @return possible object is {@link Float }
      *
@@ -387,7 +387,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the altimInHg property.
+     * Sets the fromString of the altimInHg property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -398,7 +398,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the vertVisFt property.
+     * Gets the fromString of the vertVisFt property.
      *
      * @return possible object is {@link Short }
      *
@@ -408,7 +408,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the vertVisFt property.
+     * Sets the fromString of the vertVisFt property.
      *
      * @param value
      *            allowed object is {@link Short }
@@ -419,7 +419,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the wxString property.
+     * Gets the fromString of the wxString property.
      *
      * @return possible object is {@link String }
      *
@@ -429,7 +429,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the wxString property.
+     * Sets the fromString of the wxString property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -440,7 +440,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the notDecoded property.
+     * Gets the fromString of the notDecoded property.
      *
      * @return possible object is {@link String }
      *
@@ -450,7 +450,7 @@ public class Forecast {
     }
 
     /**
-     * Sets the value of the notDecoded property.
+     * Sets the fromString of the notDecoded property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -461,7 +461,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the skyCondition property.
+     * Gets the fromString of the skyCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -491,7 +491,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the turbulenceCondition property.
+     * Gets the fromString of the turbulenceCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -521,7 +521,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the icingCondition property.
+     * Gets the fromString of the icingCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -551,7 +551,7 @@ public class Forecast {
     }
 
     /**
-     * Gets the value of the temperature property.
+     * Gets the fromString of the temperature property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a

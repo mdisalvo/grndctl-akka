@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -118,7 +118,7 @@ public class PIREP {
     protected String rawText;
 
     /**
-     * Gets the value of the receiptTime property.
+     * Gets the fromString of the receiptTime property.
      *
      * @return possible object is {@link String }
      *
@@ -128,7 +128,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the receiptTime property.
+     * Sets the fromString of the receiptTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -139,7 +139,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the observationTime property.
+     * Gets the fromString of the observationTime property.
      *
      * @return possible object is {@link String }
      *
@@ -149,7 +149,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the observationTime property.
+     * Sets the fromString of the observationTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -160,7 +160,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the qualityControlFlags property.
+     * Gets the fromString of the qualityControlFlags property.
      *
      * @return possible object is {@link QualityControlFlags }
      *
@@ -170,7 +170,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the qualityControlFlags property.
+     * Sets the fromString of the qualityControlFlags property.
      *
      * @param value
      *            allowed object is {@link QualityControlFlags }
@@ -181,7 +181,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the aircraftRef property.
+     * Gets the fromString of the aircraftRef property.
      *
      * @return possible object is {@link String }
      *
@@ -191,7 +191,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the aircraftRef property.
+     * Sets the fromString of the aircraftRef property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -202,7 +202,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -212,7 +212,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -223,7 +223,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -233,7 +233,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -244,7 +244,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the altitudeFtMsl property.
+     * Gets the fromString of the altitudeFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -254,7 +254,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the altitudeFtMsl property.
+     * Sets the fromString of the altitudeFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -265,7 +265,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the skyCondition property.
+     * Gets the fromString of the skyCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -295,7 +295,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the turbulenceCondition property.
+     * Gets the fromString of the turbulenceCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -325,7 +325,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the icingCondition property.
+     * Gets the fromString of the icingCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -355,7 +355,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the visibilityStatuteMi property.
+     * Gets the fromString of the visibilityStatuteMi property.
      *
      * @return possible object is {@link Integer }
      *
@@ -365,7 +365,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the visibilityStatuteMi property.
+     * Sets the fromString of the visibilityStatuteMi property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -376,7 +376,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the wxString property.
+     * Gets the fromString of the wxString property.
      *
      * @return possible object is {@link String }
      *
@@ -386,7 +386,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the wxString property.
+     * Sets the fromString of the wxString property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -397,7 +397,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the tempC property.
+     * Gets the fromString of the tempC property.
      *
      * @return possible object is {@link Float }
      *
@@ -407,7 +407,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the tempC property.
+     * Sets the fromString of the tempC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -418,7 +418,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the windDirDegrees property.
+     * Gets the fromString of the windDirDegrees property.
      *
      * @return possible object is {@link Integer }
      *
@@ -428,7 +428,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the windDirDegrees property.
+     * Sets the fromString of the windDirDegrees property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -439,7 +439,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the windSpeedKt property.
+     * Gets the fromString of the windSpeedKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -449,7 +449,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the windSpeedKt property.
+     * Sets the fromString of the windSpeedKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -460,7 +460,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the vertGustKt property.
+     * Gets the fromString of the vertGustKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -470,7 +470,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the vertGustKt property.
+     * Sets the fromString of the vertGustKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -481,7 +481,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the pirepType property.
+     * Gets the fromString of the pirepType property.
      *
      * @return possible object is {@link String }
      *
@@ -491,7 +491,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the pirepType property.
+     * Sets the fromString of the pirepType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -502,7 +502,7 @@ public class PIREP {
     }
 
     /**
-     * Gets the value of the rawText property.
+     * Gets the fromString of the rawText property.
      *
      * @return possible object is {@link String }
      *
@@ -512,7 +512,7 @@ public class PIREP {
     }
 
     /**
-     * Sets the value of the rawText property.
+     * Sets the fromString of the rawText property.
      *
      * @param value
      *            allowed object is {@link String }

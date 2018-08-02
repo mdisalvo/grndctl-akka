@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class Area {
     protected BigInteger numPoints;
 
     /**
-     * Gets the value of the point property.
+     * Gets the fromString of the point property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -98,7 +98,7 @@ public class Area {
     }
 
     /**
-     * Gets the value of the numPoints property.
+     * Gets the fromString of the numPoints property.
      *
      * @return possible object is {@link BigInteger }
      *
@@ -108,7 +108,7 @@ public class Area {
     }
 
     /**
-     * Sets the value of the numPoints property.
+     * Sets the fromString of the numPoints property.
      *
      * @param value
      *            allowed object is {@link BigInteger }

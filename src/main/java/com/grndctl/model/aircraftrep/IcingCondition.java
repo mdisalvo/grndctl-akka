@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ public class IcingCondition {
     protected Integer icingTopFtMsl;
 
     /**
-     * Gets the value of the icingType property.
+     * Gets the fromString of the icingType property.
      *
      * @return possible object is {@link String }
      *
@@ -80,7 +80,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingType property.
+     * Sets the fromString of the icingType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -91,7 +91,7 @@ public class IcingCondition {
     }
 
     /**
-     * Gets the value of the icingIntensity property.
+     * Gets the fromString of the icingIntensity property.
      *
      * @return possible object is {@link String }
      *
@@ -101,7 +101,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingIntensity property.
+     * Sets the fromString of the icingIntensity property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -112,7 +112,7 @@ public class IcingCondition {
     }
 
     /**
-     * Gets the value of the icingBaseFtMsl property.
+     * Gets the fromString of the icingBaseFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -122,7 +122,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingBaseFtMsl property.
+     * Sets the fromString of the icingBaseFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -133,7 +133,7 @@ public class IcingCondition {
     }
 
     /**
-     * Gets the value of the icingTopFtMsl property.
+     * Gets the fromString of the icingTopFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -143,7 +143,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingTopFtMsl property.
+     * Sets the fromString of the icingTopFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }

@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -107,7 +107,7 @@ public class GAIRMET {
     protected List<Area> area;
 
     /**
-     * Gets the value of the receiptTime property.
+     * Gets the fromString of the receiptTime property.
      *
      * @return possible object is {@link String }
      *
@@ -117,7 +117,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the receiptTime property.
+     * Sets the fromString of the receiptTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -128,7 +128,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the issueTime property.
+     * Gets the fromString of the issueTime property.
      *
      * @return possible object is {@link String }
      *
@@ -138,7 +138,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the issueTime property.
+     * Sets the fromString of the issueTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -149,7 +149,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the expireTime property.
+     * Gets the fromString of the expireTime property.
      *
      * @return possible object is {@link String }
      *
@@ -159,7 +159,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the expireTime property.
+     * Sets the fromString of the expireTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -170,7 +170,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the product property.
+     * Gets the fromString of the product property.
      *
      * @return possible object is {@link String }
      *
@@ -180,7 +180,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the product property.
+     * Sets the fromString of the product property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -191,7 +191,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the forecastHour property.
+     * Gets the fromString of the forecastHour property.
      *
      * @return possible object is {@link BigInteger }
      *
@@ -201,7 +201,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the forecastHour property.
+     * Sets the fromString of the forecastHour property.
      *
      * @param value
      *            allowed object is {@link BigInteger }
@@ -212,7 +212,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the validTime property.
+     * Gets the fromString of the validTime property.
      *
      * @return possible object is {@link String }
      *
@@ -222,7 +222,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the validTime property.
+     * Sets the fromString of the validTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -233,7 +233,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the hazard property.
+     * Gets the fromString of the hazard property.
      *
      * @return possible object is {@link Hazard }
      *
@@ -243,7 +243,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the hazard property.
+     * Sets the fromString of the hazard property.
      *
      * @param value
      *            allowed object is {@link Hazard }
@@ -254,7 +254,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the geometryType property.
+     * Gets the fromString of the geometryType property.
      *
      * @return possible object is {@link String }
      *
@@ -264,7 +264,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the geometryType property.
+     * Sets the fromString of the geometryType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -275,7 +275,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the frequency property.
+     * Gets the fromString of the frequency property.
      *
      * @return possible object is {@link String }
      *
@@ -285,7 +285,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the frequency property.
+     * Sets the fromString of the frequency property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -296,7 +296,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the dueTo property.
+     * Gets the fromString of the dueTo property.
      *
      * @return possible object is {@link String }
      *
@@ -306,7 +306,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the dueTo property.
+     * Sets the fromString of the dueTo property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -317,7 +317,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the status property.
+     * Gets the fromString of the status property.
      *
      * @return possible object is {@link String }
      *
@@ -327,7 +327,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the status property.
+     * Sets the fromString of the status property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -338,7 +338,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the altitude property.
+     * Gets the fromString of the altitude property.
      *
      * @return possible object is {@link Altitude }
      *
@@ -348,7 +348,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the altitude property.
+     * Sets the fromString of the altitude property.
      *
      * @param value
      *            allowed object is {@link Altitude }
@@ -359,7 +359,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the fzlAltitude property.
+     * Gets the fromString of the fzlAltitude property.
      *
      * @return possible object is {@link FzlAltitude }
      *
@@ -369,7 +369,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the fzlAltitude property.
+     * Sets the fromString of the fzlAltitude property.
      *
      * @param value
      *            allowed object is {@link FzlAltitude }
@@ -380,7 +380,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the level property.
+     * Gets the fromString of the level property.
      *
      * @return possible object is {@link BigInteger }
      *
@@ -390,7 +390,7 @@ public class GAIRMET {
     }
 
     /**
-     * Sets the value of the level property.
+     * Sets the fromString of the level property.
      *
      * @param value
      *            allowed object is {@link BigInteger }
@@ -401,7 +401,7 @@ public class GAIRMET {
     }
 
     /**
-     * Gets the value of the area property.
+     * Gets the fromString of the area property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a

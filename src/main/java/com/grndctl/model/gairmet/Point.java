@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public class Point {
     protected float latitude;
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      */
     public float getLongitude() {
@@ -75,7 +75,7 @@ public class Point {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      */
     public void setLongitude(float value) {
@@ -83,7 +83,7 @@ public class Point {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      */
     public float getLatitude() {
@@ -91,7 +91,7 @@ public class Point {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      */
     public void setLatitude(float value) {

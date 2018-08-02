@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ public class Response {
     protected String version;
 
     /**
-     * Gets the value of the requestIndex property.
+     * Gets the fromString of the requestIndex property.
      *
      */
     public int getRequestIndex() {
@@ -93,7 +93,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the requestIndex property.
+     * Sets the fromString of the requestIndex property.
      *
      */
     public void setRequestIndex(int value) {
@@ -101,7 +101,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the dataSource property.
+     * Gets the fromString of the dataSource property.
      *
      * @return possible object is {@link DataSource }
      *
@@ -111,7 +111,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the dataSource property.
+     * Sets the fromString of the dataSource property.
      *
      * @param value
      *            allowed object is {@link DataSource }
@@ -122,7 +122,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the request property.
+     * Gets the fromString of the request property.
      *
      * @return possible object is {@link Request }
      *
@@ -132,7 +132,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the request property.
+     * Sets the fromString of the request property.
      *
      * @param value
      *            allowed object is {@link Request }
@@ -143,7 +143,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the errors property.
+     * Gets the fromString of the errors property.
      *
      * @return possible object is {@link Errors }
      *
@@ -153,7 +153,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the errors property.
+     * Sets the fromString of the errors property.
      *
      * @param value
      *            allowed object is {@link Errors }
@@ -164,7 +164,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the warnings property.
+     * Gets the fromString of the warnings property.
      *
      * @return possible object is {@link Warnings }
      *
@@ -174,7 +174,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the warnings property.
+     * Sets the fromString of the warnings property.
      *
      * @param value
      *            allowed object is {@link Warnings }
@@ -185,7 +185,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the timeTakenMs property.
+     * Gets the fromString of the timeTakenMs property.
      *
      */
     public int getTimeTakenMs() {
@@ -193,7 +193,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the timeTakenMs property.
+     * Sets the fromString of the timeTakenMs property.
      *
      */
     public void setTimeTakenMs(int value) {
@@ -201,7 +201,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the data property.
+     * Gets the fromString of the data property.
      *
      * @return possible object is {@link Data }
      *
@@ -211,7 +211,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the data property.
+     * Sets the fromString of the data property.
      *
      * @param value
      *            allowed object is {@link Data }
@@ -222,7 +222,7 @@ public class Response {
     }
 
     /**
-     * Gets the value of the version property.
+     * Gets the fromString of the version property.
      *
      * @return possible object is {@link String }
      *
@@ -236,7 +236,7 @@ public class Response {
     }
 
     /**
-     * Sets the value of the version property.
+     * Sets the fromString of the version property.
      *
      * @param value
      *            allowed object is {@link String }

@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public class IcingCondition {
     protected Integer icingMaxAltFtAgl;
 
     /**
-     * Gets the value of the icingIntensity property.
+     * Gets the fromString of the icingIntensity property.
      *
      * @return possible object is {@link String }
      *
@@ -77,7 +77,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingIntensity property.
+     * Sets the fromString of the icingIntensity property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -88,7 +88,7 @@ public class IcingCondition {
     }
 
     /**
-     * Gets the value of the icingMinAltFtAgl property.
+     * Gets the fromString of the icingMinAltFtAgl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -98,7 +98,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingMinAltFtAgl property.
+     * Sets the fromString of the icingMinAltFtAgl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -109,7 +109,7 @@ public class IcingCondition {
     }
 
     /**
-     * Gets the value of the icingMaxAltFtAgl property.
+     * Gets the fromString of the icingMaxAltFtAgl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -119,7 +119,7 @@ public class IcingCondition {
     }
 
     /**
-     * Sets the value of the icingMaxAltFtAgl property.
+     * Sets the fromString of the icingMaxAltFtAgl property.
      *
      * @param value
      *            allowed object is {@link Integer }

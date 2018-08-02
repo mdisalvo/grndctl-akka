@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public class TurbulenceCondition {
     protected Integer turbulenceMaxAltFtAgl;
 
     /**
-     * Gets the value of the turbulenceIntensity property.
+     * Gets the fromString of the turbulenceIntensity property.
      *
      * @return possible object is {@link String }
      *
@@ -77,7 +77,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceIntensity property.
+     * Sets the fromString of the turbulenceIntensity property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -88,7 +88,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceMinAltFtAgl property.
+     * Gets the fromString of the turbulenceMinAltFtAgl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -98,7 +98,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceMinAltFtAgl property.
+     * Sets the fromString of the turbulenceMinAltFtAgl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -109,7 +109,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Gets the value of the turbulenceMaxAltFtAgl property.
+     * Gets the fromString of the turbulenceMaxAltFtAgl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -119,7 +119,7 @@ public class TurbulenceCondition {
     }
 
     /**
-     * Sets the value of the turbulenceMaxAltFtAgl property.
+     * Sets the fromString of the turbulenceMaxAltFtAgl property.
      *
      * @param value
      *            allowed object is {@link Integer }

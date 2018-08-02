@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@
 //
 
 package com.grndctl.model.aircraftrep;
+
+import com.google.common.base.Objects;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
@@ -118,7 +120,7 @@ public class AircraftReport {
     protected String rawText;
 
     /**
-     * Gets the value of the receiptTime property.
+     * Gets the fromString of the receiptTime property.
      *
      * @return possible object is {@link String }
      *
@@ -128,7 +130,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the receiptTime property.
+     * Sets the fromString of the receiptTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -139,7 +141,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the observationTime property.
+     * Gets the fromString of the observationTime property.
      *
      * @return possible object is {@link String }
      *
@@ -149,7 +151,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the observationTime property.
+     * Sets the fromString of the observationTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -160,7 +162,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the qualityControlFlags property.
+     * Gets the fromString of the qualityControlFlags property.
      *
      * @return possible object is {@link QualityControlFlags }
      *
@@ -170,7 +172,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the qualityControlFlags property.
+     * Sets the fromString of the qualityControlFlags property.
      *
      * @param value
      *            allowed object is {@link QualityControlFlags }
@@ -181,7 +183,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the aircraftRef property.
+     * Gets the fromString of the aircraftRef property.
      *
      * @return possible object is {@link String }
      *
@@ -191,7 +193,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the aircraftRef property.
+     * Sets the fromString of the aircraftRef property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -202,7 +204,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -212,7 +214,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -223,7 +225,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -233,7 +235,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -244,7 +246,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the altitudeFtMsl property.
+     * Gets the fromString of the altitudeFtMsl property.
      *
      * @return possible object is {@link Integer }
      *
@@ -254,7 +256,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the altitudeFtMsl property.
+     * Sets the fromString of the altitudeFtMsl property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -265,7 +267,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the skyCondition property.
+     * Gets the fromString of the skyCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -295,7 +297,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the turbulenceCondition property.
+     * Gets the fromString of the turbulenceCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -325,7 +327,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the icingCondition property.
+     * Gets the fromString of the icingCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -355,7 +357,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the visibilityStatuteMi property.
+     * Gets the fromString of the visibilityStatuteMi property.
      *
      * @return possible object is {@link Integer }
      *
@@ -365,7 +367,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the visibilityStatuteMi property.
+     * Sets the fromString of the visibilityStatuteMi property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -376,7 +378,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the wxString property.
+     * Gets the fromString of the wxString property.
      *
      * @return possible object is {@link String }
      *
@@ -386,7 +388,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the wxString property.
+     * Sets the fromString of the wxString property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -397,7 +399,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the tempC property.
+     * Gets the fromString of the tempC property.
      *
      * @return possible object is {@link Float }
      *
@@ -407,7 +409,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the tempC property.
+     * Sets the fromString of the tempC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -418,7 +420,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the windDirDegrees property.
+     * Gets the fromString of the windDirDegrees property.
      *
      * @return possible object is {@link Integer }
      *
@@ -428,7 +430,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the windDirDegrees property.
+     * Sets the fromString of the windDirDegrees property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -439,7 +441,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the windSpeedKt property.
+     * Gets the fromString of the windSpeedKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -449,7 +451,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the windSpeedKt property.
+     * Sets the fromString of the windSpeedKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -460,7 +462,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the vertGustKt property.
+     * Gets the fromString of the vertGustKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -470,7 +472,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the vertGustKt property.
+     * Sets the fromString of the vertGustKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -481,7 +483,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the reportType property.
+     * Gets the fromString of the reportType property.
      *
      * @return possible object is {@link String }
      *
@@ -491,7 +493,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the reportType property.
+     * Sets the fromString of the reportType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -502,7 +504,7 @@ public class AircraftReport {
     }
 
     /**
-     * Gets the value of the rawText property.
+     * Gets the fromString of the rawText property.
      *
      * @return possible object is {@link String }
      *
@@ -512,7 +514,7 @@ public class AircraftReport {
     }
 
     /**
-     * Sets the value of the rawText property.
+     * Sets the fromString of the rawText property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -522,4 +524,60 @@ public class AircraftReport {
         this.rawText = value;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AircraftReport that = (AircraftReport) o;
+
+        if (receiptTime != null ? !receiptTime.equals(that.receiptTime) : that.receiptTime != null) return false;
+        if (observationTime != null ? !observationTime.equals(that.observationTime) : that.observationTime != null)
+            return false;
+        if (qualityControlFlags != null ? !qualityControlFlags.equals(that.qualityControlFlags) : that.qualityControlFlags != null)
+            return false;
+        if (aircraftRef != null ? !aircraftRef.equals(that.aircraftRef) : that.aircraftRef != null) return false;
+        if (latitude != null ? !latitude.equals(that.latitude) : that.latitude != null) return false;
+        if (longitude != null ? !longitude.equals(that.longitude) : that.longitude != null) return false;
+        if (altitudeFtMsl != null ? !altitudeFtMsl.equals(that.altitudeFtMsl) : that.altitudeFtMsl != null)
+            return false;
+        if (skyCondition != null ? !skyCondition.equals(that.skyCondition) : that.skyCondition != null) return false;
+        if (turbulenceCondition != null ? !turbulenceCondition.equals(that.turbulenceCondition) : that.turbulenceCondition != null)
+            return false;
+        if (icingCondition != null ? !icingCondition.equals(that.icingCondition) : that.icingCondition != null)
+            return false;
+        if (visibilityStatuteMi != null ? !visibilityStatuteMi.equals(that.visibilityStatuteMi) : that.visibilityStatuteMi != null)
+            return false;
+        if (wxString != null ? !wxString.equals(that.wxString) : that.wxString != null) return false;
+        if (tempC != null ? !tempC.equals(that.tempC) : that.tempC != null) return false;
+        if (windDirDegrees != null ? !windDirDegrees.equals(that.windDirDegrees) : that.windDirDegrees != null)
+            return false;
+        if (windSpeedKt != null ? !windSpeedKt.equals(that.windSpeedKt) : that.windSpeedKt != null) return false;
+        if (vertGustKt != null ? !vertGustKt.equals(that.vertGustKt) : that.vertGustKt != null) return false;
+        if (reportType != null ? !reportType.equals(that.reportType) : that.reportType != null) return false;
+        return rawText != null ? rawText.equals(that.rawText) : that.rawText == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = receiptTime != null ? receiptTime.hashCode() : 0;
+        result = 31 * result + (observationTime != null ? observationTime.hashCode() : 0);
+        result = 31 * result + (qualityControlFlags != null ? qualityControlFlags.hashCode() : 0);
+        result = 31 * result + (aircraftRef != null ? aircraftRef.hashCode() : 0);
+        result = 31 * result + (latitude != null ? latitude.hashCode() : 0);
+        result = 31 * result + (longitude != null ? longitude.hashCode() : 0);
+        result = 31 * result + (altitudeFtMsl != null ? altitudeFtMsl.hashCode() : 0);
+        result = 31 * result + (skyCondition != null ? skyCondition.hashCode() : 0);
+        result = 31 * result + (turbulenceCondition != null ? turbulenceCondition.hashCode() : 0);
+        result = 31 * result + (icingCondition != null ? icingCondition.hashCode() : 0);
+        result = 31 * result + (visibilityStatuteMi != null ? visibilityStatuteMi.hashCode() : 0);
+        result = 31 * result + (wxString != null ? wxString.hashCode() : 0);
+        result = 31 * result + (tempC != null ? tempC.hashCode() : 0);
+        result = 31 * result + (windDirDegrees != null ? windDirDegrees.hashCode() : 0);
+        result = 31 * result + (windSpeedKt != null ? windSpeedKt.hashCode() : 0);
+        result = 31 * result + (vertGustKt != null ? vertGustKt.hashCode() : 0);
+        result = 31 * result + (reportType != null ? reportType.hashCode() : 0);
+        result = 31 * result + (rawText != null ? rawText.hashCode() : 0);
+        return result;
+    }
 }

@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -61,7 +61,7 @@ public class DataSource {
     protected String name;
 
     /**
-     * Gets the value of the name property.
+     * Gets the fromString of the name property.
      *
      * @return possible object is {@link String }
      *
@@ -71,7 +71,7 @@ public class DataSource {
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the fromString of the name property.
      *
      * @param value
      *            allowed object is {@link String }

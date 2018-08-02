@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -93,7 +93,7 @@ public class TAF {
     protected List<Forecast> forecast;
 
     /**
-     * Gets the value of the rawText property.
+     * Gets the fromString of the rawText property.
      *
      * @return possible object is {@link String }
      *
@@ -103,7 +103,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the rawText property.
+     * Sets the fromString of the rawText property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -114,7 +114,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the stationId property.
+     * Gets the fromString of the stationId property.
      *
      * @return possible object is {@link String }
      *
@@ -124,7 +124,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the stationId property.
+     * Sets the fromString of the stationId property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -135,7 +135,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the issueTime property.
+     * Gets the fromString of the issueTime property.
      *
      * @return possible object is {@link String }
      *
@@ -145,7 +145,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the issueTime property.
+     * Sets the fromString of the issueTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -156,7 +156,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the bulletinTime property.
+     * Gets the fromString of the bulletinTime property.
      *
      * @return possible object is {@link String }
      *
@@ -166,7 +166,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the bulletinTime property.
+     * Sets the fromString of the bulletinTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -177,7 +177,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the validTimeFrom property.
+     * Gets the fromString of the validTimeFrom property.
      *
      * @return possible object is {@link String }
      *
@@ -187,7 +187,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the validTimeFrom property.
+     * Sets the fromString of the validTimeFrom property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -198,7 +198,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the validTimeTo property.
+     * Gets the fromString of the validTimeTo property.
      *
      * @return possible object is {@link String }
      *
@@ -208,7 +208,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the validTimeTo property.
+     * Sets the fromString of the validTimeTo property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -219,7 +219,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the remarks property.
+     * Gets the fromString of the remarks property.
      *
      * @return possible object is {@link String }
      *
@@ -229,7 +229,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the remarks property.
+     * Sets the fromString of the remarks property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -240,7 +240,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -250,7 +250,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -261,7 +261,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -271,7 +271,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -282,7 +282,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the elevationM property.
+     * Gets the fromString of the elevationM property.
      *
      * @return possible object is {@link Float }
      *
@@ -292,7 +292,7 @@ public class TAF {
     }
 
     /**
-     * Sets the value of the elevationM property.
+     * Sets the fromString of the elevationM property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -303,7 +303,7 @@ public class TAF {
     }
 
     /**
-     * Gets the value of the forecast property.
+     * Gets the fromString of the forecast property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a

@@ -2,6 +2,7 @@ package com.grndctl.services
 
 import java.net.URL
 
+import com.grndctl.misc.InputStreamUnmarshaller
 import com.grndctl.model.metar
 import com.grndctl.model.metar.METAR
 import com.typesafe.scalalogging.LazyLogging
@@ -27,11 +28,8 @@ class MetarSvc(implicit ec: ExecutionContext)
 
   private val OneHr: Float = 1
 
-  private val ErrorMessage: String = "Exception when unmarshalling entity from ADDS Service."
-
   def getCurrentMetar(station: String): Future[Seq[METAR]] = {
-    val url: URL = new URL(RequestUrl + MostRecentConstraint + StationString + station + HrsBefore + OneHr)
-    unmarshall(url)
+    unmarshall(new URL(RequestUrl + MostRecentConstraint + StationString + station + HrsBefore + OneHr))
       .map(_.getData.getMETAR.asScala)
       .recover {
         case e: Exception =>
@@ -41,12 +39,11 @@ class MetarSvc(implicit ec: ExecutionContext)
   }
 
   def getMetars(station: String, hrsBefore: Double): Future[Seq[METAR]] = {
-    val url: URL = new URL(RequestUrl + HrsBefore + hrsBefore + StationString + station)
-    unmarshall(url)
+    unmarshall(new URL(RequestUrl + HrsBefore + hrsBefore + StationString + station))
       .map(_.getData.getMETAR.asScala)
       .recover {
         case e: Exception =>
-          logger.error(ErrorMessage)
+          logger.error(ErrorMessage, e)
           Seq.empty
       }
   }

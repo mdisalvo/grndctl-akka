@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -84,7 +84,7 @@ public class QualityControlFlags {
     protected String presentWeatherSensorOff;
 
     /**
-     * Gets the value of the corrected property.
+     * Gets the fromString of the corrected property.
      *
      * @return possible object is {@link String }
      *
@@ -94,7 +94,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the corrected property.
+     * Sets the fromString of the corrected property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -105,7 +105,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the auto property.
+     * Gets the fromString of the auto property.
      *
      * @return possible object is {@link String }
      *
@@ -115,7 +115,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the auto property.
+     * Sets the fromString of the auto property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -126,7 +126,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the autoStation property.
+     * Gets the fromString of the autoStation property.
      *
      * @return possible object is {@link String }
      *
@@ -136,7 +136,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the autoStation property.
+     * Sets the fromString of the autoStation property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -147,7 +147,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the maintenanceIndicatorOn property.
+     * Gets the fromString of the maintenanceIndicatorOn property.
      *
      * @return possible object is {@link String }
      *
@@ -157,7 +157,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the maintenanceIndicatorOn property.
+     * Sets the fromString of the maintenanceIndicatorOn property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -168,7 +168,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the noSignal property.
+     * Gets the fromString of the noSignal property.
      *
      * @return possible object is {@link String }
      *
@@ -178,7 +178,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the noSignal property.
+     * Sets the fromString of the noSignal property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -189,7 +189,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the lightningSensorOff property.
+     * Gets the fromString of the lightningSensorOff property.
      *
      * @return possible object is {@link String }
      *
@@ -199,7 +199,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the lightningSensorOff property.
+     * Sets the fromString of the lightningSensorOff property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -210,7 +210,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the freezingRainSensorOff property.
+     * Gets the fromString of the freezingRainSensorOff property.
      *
      * @return possible object is {@link String }
      *
@@ -220,7 +220,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the freezingRainSensorOff property.
+     * Sets the fromString of the freezingRainSensorOff property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -231,7 +231,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the presentWeatherSensorOff property.
+     * Gets the fromString of the presentWeatherSensorOff property.
      *
      * @return possible object is {@link String }
      *
@@ -241,7 +241,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the presentWeatherSensorOff property.
+     * Sets the fromString of the presentWeatherSensorOff property.
      *
      * @param value
      *            allowed object is {@link String }

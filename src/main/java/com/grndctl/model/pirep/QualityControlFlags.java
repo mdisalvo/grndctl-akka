@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class QualityControlFlags {
     protected String badLocation;
 
     /**
-     * Gets the value of the midPointAssumed property.
+     * Gets the fromString of the midPointAssumed property.
      *
      * @return possible object is {@link String }
      *
@@ -89,7 +89,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the midPointAssumed property.
+     * Sets the fromString of the midPointAssumed property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -100,7 +100,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the noTimeStamp property.
+     * Gets the fromString of the noTimeStamp property.
      *
      * @return possible object is {@link String }
      *
@@ -110,7 +110,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the noTimeStamp property.
+     * Sets the fromString of the noTimeStamp property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -121,7 +121,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the fltLvlRange property.
+     * Gets the fromString of the fltLvlRange property.
      *
      * @return possible object is {@link String }
      *
@@ -131,7 +131,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the fltLvlRange property.
+     * Sets the fromString of the fltLvlRange property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -142,7 +142,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the aboveGroundLevelIndicated property.
+     * Gets the fromString of the aboveGroundLevelIndicated property.
      *
      * @return possible object is {@link String }
      *
@@ -152,7 +152,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the aboveGroundLevelIndicated property.
+     * Sets the fromString of the aboveGroundLevelIndicated property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -163,7 +163,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the noFltLvl property.
+     * Gets the fromString of the noFltLvl property.
      *
      * @return possible object is {@link String }
      *
@@ -173,7 +173,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the noFltLvl property.
+     * Sets the fromString of the noFltLvl property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -184,7 +184,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Gets the value of the badLocation property.
+     * Gets the fromString of the badLocation property.
      *
      * @return possible object is {@link String }
      *
@@ -194,7 +194,7 @@ public class QualityControlFlags {
     }
 
     /**
-     * Sets the value of the badLocation property.
+     * Sets the fromString of the badLocation property.
      *
      * @param value
      *            allowed object is {@link String }

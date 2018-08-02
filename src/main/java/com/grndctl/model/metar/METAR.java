@@ -156,7 +156,7 @@ public class METAR {
     protected Float elevationM;
 
     /**
-     * Gets the value of the rawText property.
+     * Gets the fromString of the rawText property.
      *
      * @return possible object is {@link String }
      *
@@ -166,7 +166,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the rawText property.
+     * Sets the fromString of the rawText property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -177,7 +177,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the stationId property.
+     * Gets the fromString of the stationId property.
      *
      * @return possible object is {@link String }
      *
@@ -187,7 +187,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the stationId property.
+     * Sets the fromString of the stationId property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -198,7 +198,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the observationTime property.
+     * Gets the fromString of the observationTime property.
      *
      * @return possible object is {@link String }
      *
@@ -208,7 +208,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the observationTime property.
+     * Sets the fromString of the observationTime property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -219,7 +219,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -229,7 +229,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -240,7 +240,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      * @return possible object is {@link Float }
      *
@@ -250,7 +250,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -261,7 +261,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the tempC property.
+     * Gets the fromString of the tempC property.
      *
      * @return possible object is {@link Float }
      *
@@ -271,7 +271,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the tempC property.
+     * Sets the fromString of the tempC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -282,7 +282,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the dewpointC property.
+     * Gets the fromString of the dewpointC property.
      *
      * @return possible object is {@link Float }
      *
@@ -292,7 +292,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the dewpointC property.
+     * Sets the fromString of the dewpointC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -303,7 +303,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the windDirDegrees property.
+     * Gets the fromString of the windDirDegrees property.
      *
      * @return possible object is {@link Integer }
      *
@@ -313,7 +313,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the windDirDegrees property.
+     * Sets the fromString of the windDirDegrees property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -324,7 +324,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the windSpeedKt property.
+     * Gets the fromString of the windSpeedKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -334,7 +334,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the windSpeedKt property.
+     * Sets the fromString of the windSpeedKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -345,7 +345,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the windGustKt property.
+     * Gets the fromString of the windGustKt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -355,7 +355,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the windGustKt property.
+     * Sets the fromString of the windGustKt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -366,7 +366,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the visibilityStatuteMi property.
+     * Gets the fromString of the visibilityStatuteMi property.
      *
      * @return possible object is {@link Float }
      *
@@ -376,7 +376,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the visibilityStatuteMi property.
+     * Sets the fromString of the visibilityStatuteMi property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -387,7 +387,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the altimInHg property.
+     * Gets the fromString of the altimInHg property.
      *
      * @return possible object is {@link Float }
      *
@@ -397,7 +397,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the altimInHg property.
+     * Sets the fromString of the altimInHg property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -408,7 +408,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the seaLevelPressureMb property.
+     * Gets the fromString of the seaLevelPressureMb property.
      *
      * @return possible object is {@link Float }
      *
@@ -418,7 +418,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the seaLevelPressureMb property.
+     * Sets the fromString of the seaLevelPressureMb property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -429,7 +429,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the qualityControlFlags property.
+     * Gets the fromString of the qualityControlFlags property.
      *
      * @return possible object is {@link QualityControlFlags }
      *
@@ -439,7 +439,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the qualityControlFlags property.
+     * Sets the fromString of the qualityControlFlags property.
      *
      * @param value
      *            allowed object is {@link QualityControlFlags }
@@ -450,7 +450,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the wxString property.
+     * Gets the fromString of the wxString property.
      *
      * @return possible object is {@link String }
      *
@@ -460,7 +460,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the wxString property.
+     * Sets the fromString of the wxString property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -471,7 +471,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the skyCondition property.
+     * Gets the fromString of the skyCondition property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
@@ -505,7 +505,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the flightCategory property.
+     * Gets the fromString of the flightCategory property.
      *
      * @return possible object is {@link String }
      *
@@ -515,7 +515,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the flightCategory property.
+     * Sets the fromString of the flightCategory property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -526,7 +526,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the threeHrPressureTendencyMb property.
+     * Gets the fromString of the threeHrPressureTendencyMb property.
      *
      * @return possible object is {@link Float }
      *
@@ -536,7 +536,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the threeHrPressureTendencyMb property.
+     * Sets the fromString of the threeHrPressureTendencyMb property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -547,7 +547,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the maxTC property.
+     * Gets the fromString of the maxTC property.
      *
      * @return possible object is {@link Float }
      *
@@ -557,7 +557,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the maxTC property.
+     * Sets the fromString of the maxTC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -568,7 +568,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the minTC property.
+     * Gets the fromString of the minTC property.
      *
      * @return possible object is {@link Float }
      *
@@ -578,7 +578,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the minTC property.
+     * Sets the fromString of the minTC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -589,7 +589,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the maxT24HrC property.
+     * Gets the fromString of the maxT24HrC property.
      *
      * @return possible object is {@link Float }
      *
@@ -599,7 +599,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the maxT24HrC property.
+     * Sets the fromString of the maxT24HrC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -610,7 +610,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the minT24HrC property.
+     * Gets the fromString of the minT24HrC property.
      *
      * @return possible object is {@link Float }
      *
@@ -620,7 +620,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the minT24HrC property.
+     * Sets the fromString of the minT24HrC property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -631,7 +631,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the precipIn property.
+     * Gets the fromString of the precipIn property.
      *
      * @return possible object is {@link Float }
      *
@@ -641,7 +641,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the precipIn property.
+     * Sets the fromString of the precipIn property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -652,7 +652,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the pcp3HrIn property.
+     * Gets the fromString of the pcp3HrIn property.
      *
      * @return possible object is {@link Float }
      *
@@ -662,7 +662,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the pcp3HrIn property.
+     * Sets the fromString of the pcp3HrIn property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -673,7 +673,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the pcp6HrIn property.
+     * Gets the fromString of the pcp6HrIn property.
      *
      * @return possible object is {@link Float }
      *
@@ -683,7 +683,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the pcp6HrIn property.
+     * Sets the fromString of the pcp6HrIn property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -694,7 +694,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the pcp24HrIn property.
+     * Gets the fromString of the pcp24HrIn property.
      *
      * @return possible object is {@link Float }
      *
@@ -704,7 +704,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the pcp24HrIn property.
+     * Sets the fromString of the pcp24HrIn property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -715,7 +715,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the snowIn property.
+     * Gets the fromString of the snowIn property.
      *
      * @return possible object is {@link Float }
      *
@@ -725,7 +725,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the snowIn property.
+     * Sets the fromString of the snowIn property.
      *
      * @param value
      *            allowed object is {@link Float }
@@ -736,7 +736,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the vertVisFt property.
+     * Gets the fromString of the vertVisFt property.
      *
      * @return possible object is {@link Integer }
      *
@@ -746,7 +746,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the vertVisFt property.
+     * Sets the fromString of the vertVisFt property.
      *
      * @param value
      *            allowed object is {@link Integer }
@@ -757,7 +757,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the metarType property.
+     * Gets the fromString of the metarType property.
      *
      * @return possible object is {@link String }
      *
@@ -767,7 +767,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the metarType property.
+     * Sets the fromString of the metarType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -778,7 +778,7 @@ public class METAR {
     }
 
     /**
-     * Gets the value of the elevationM property.
+     * Gets the fromString of the elevationM property.
      *
      * @return possible object is {@link Float }
      *
@@ -788,7 +788,7 @@ public class METAR {
     }
 
     /**
-     * Sets the value of the elevationM property.
+     * Sets the fromString of the elevationM property.
      *
      * @param value
      *            allowed object is {@link Float }

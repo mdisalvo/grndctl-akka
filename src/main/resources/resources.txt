@@ -1,0 +1,175 @@
+https://getbootstrap.com/docs/3.3/getting-started/
+
+https://stackoverflow.com/questions/39866000/java-try-with-resource-not-working-with-scala
+
+// Version 1
+val route: Route =
+    handleRejections(RejectionHandler.default) {
+        headerValueByName("X-value") { headerVal =>
+            pathPrefix("some" / "path") {
+                pathEndOrSingleSlash {
+                    post {
+                        callFunction()
+                    } ~
+                    get {
+                        anotherFunction()
+                    } ~
+                    delete {
+                        yetAnotherFunction()
+                    } ~
+                        pathPrefix(Segment) { id =>
+                            get {
+                                getId(id)
+                            } ~
+                            delete {
+                                deleteId(id)empty
+                            }
+                        }
+                }
+            }
+        }
+    }
+
+def callFunction: Route = {
+    complete(OK, request)
+}
+
+// Version 2
+
+val route: Route =
+    handleRejections(RejectionHandler.default) {
+        headerValueByName("X-value") { headerVal =>
+            pathPrefix("some" / "path") {
+                pathEndOrSingleSlash {
+                    someFunction(headerVal)
+                }
+            }
+        }
+    }
+
+    def someFunction(headerVal: String): Route =
+        post {
+            entity(as[SomeType]) { requestType =>
+                onSuccess(someService.call(headerVal, requestType)) { responses =>
+                    complete(OK, responses)
+                }
+            }
+        }
+
+
+
+package com.grndctl.model.metar
+
+import spray.json.DefaultJsonProtocol._
+import spray.json.RootJsonFormat
+
+/**
+  * @author Michael Di Salvo
+  * michael.vincent.disalvo@gmail.com
+  */
+case class METAR(rawText: String,
+                 stationId: String,
+                 observationTime: String,
+                 latitude: Float,
+                 longitude: Float,
+                 tempC: Float,
+                 dewpointC: Float,
+                 windDirDegrees: Int,
+                 windSpeedKt: Int,
+                 windGustKt: Int,
+                 visibilityStatuteMi: Float,
+                 altimInHg: Float,
+                 seaLevelPressureMb: Float,
+                )
+
+object METAR {
+  implicit val metarFormat: RootJsonFormat[METAR] = jsonFormat13(METAR.apply)
+}
+
+/**
+@XmlElement(name = "quality_control_flags")
+    protected QualityControlFlags qualityControlFlags;
+@XmlElement(name = "wx_string")
+    protected String wxString;
+@XmlElement(name = "sky_condition")
+    protected List<SkyCondition> skyCondition;
+@XmlElement(name = "flight_category")
+    protected String flightCategory;
+@XmlElement(name = "three_hr_pressure_tendency_mb")
+    protected Float threeHrPressureTendencyMb;
+@XmlElement(name = "maxT_c")
+    protected Float maxTC;
+@XmlElement(name = "minT_c")
+    protected Float minTC;
+@XmlElement(name = "maxT24hr_c")
+    protected Float maxT24HrC;
+@XmlElement(name = "minT24hr_c")
+    protected Float minT24HrC;
+@XmlElement(name = "precip_in")
+    protected Float precipIn;
+@XmlElement(name = "pcp3hr_in")
+    protected Float pcp3HrIn;
+@XmlElement(name = "pcp6hr_in")
+    protected Float pcp6HrIn;
+@XmlElement(name = "pcp24hr_in")
+    protected Float pcp24HrIn;
+@XmlElement(name = "snow_in")
+    protected Float snowIn;
+@XmlElement(name = "vert_vis_ft")
+    protected Integer vertVisFt;
+@XmlElement(name = "metar_type")
+    protected String metarType;
+@XmlElement(name = "elevation_m")
+    protected Float elevationM;
+
+
+  **/
+
+  package com.grndctl.model.metar
+
+import spray.json.DefaultJsonProtocol._
+import spray.json.RootJsonFormat
+
+object METAR extends METAR {
+//  implicit val metarFormat: RootJsonFormat[METAR] = jsonFormat30(x)
+}
+
+lazy val unpackSwagger = taskKey[Seq[File]]("Does some stuff")
+unpackSwagger := {
+  val swaggerUiJar = (Compile / managedClasspath).value.files
+    .filter(_.getAbsoluteFile.getName == s"${swaggerUi.name}-${swaggerUi.revision}.jar")
+    .head
+  val temp = IO.createTemporaryDirectory
+  temp.deleteOnExit()
+  IO.unzip(swaggerUiJar, temp)
+  val swaggerSources = (temp / "META-INF" / "resources" / "webjars" / swaggerUi.name / swaggerUi.revision ** "*").get
+  val targetDir = (Compile / resourceManaged).value / "swagger"
+  val filesToCopy = swaggerSources.filterNot(_.isDirectory).map(file => (file, targetDir / file.name))
+  IO.copy(filesToCopy)
+  streams.value.log.info(s"Unpacled swagger into $targetDir")
+  filesToCopy.map(_._2)
+}
+
+package com.grndctl.misc
+
+import java.nio.file.{Files, Paths}
+
+import com.grndctl.controllers.SwaggerController
+
+/**
+  * @author Michael Di Salvo
+  * michael.vincent.disalvo@gmail.com
+  */
+object SchemaGenerator {
+  val config = new Config()
+
+  def main(args: Array[String]): Unit = {
+    val schemaYaml = new SwaggerController(config.httpHost, config.httpPort).generateSwaggerYaml
+
+    val dir = Paths.get("target/swagger")
+    if (!Files.exists(dir)) Files.createDirectory(dir)
+    val swaggerFile = dir.resolve("swagger.yaml")
+
+    Files.write(swaggerFile, schemaYaml.getBytes)
+  }
+}

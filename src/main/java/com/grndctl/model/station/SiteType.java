@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ public class SiteType {
     protected Object synops;
 
     /**
-     * Gets the value of the metar property.
+     * Gets the fromString of the metar property.
      *
      * @return possible object is {@link Object }
      *
@@ -95,7 +95,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the metar property.
+     * Sets the fromString of the metar property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -106,7 +106,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the nexrad property.
+     * Gets the fromString of the nexrad property.
      *
      * @return possible object is {@link Object }
      *
@@ -116,7 +116,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the nexrad property.
+     * Sets the fromString of the nexrad property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -127,7 +127,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the rawinsonde property.
+     * Gets the fromString of the rawinsonde property.
      *
      * @return possible object is {@link Object }
      *
@@ -137,7 +137,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the rawinsonde property.
+     * Sets the fromString of the rawinsonde property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -148,7 +148,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the windProfiler property.
+     * Gets the fromString of the windProfiler property.
      *
      * @return possible object is {@link Object }
      *
@@ -158,7 +158,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the windProfiler property.
+     * Sets the fromString of the windProfiler property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -169,7 +169,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the wfoOffice property.
+     * Gets the fromString of the wfoOffice property.
      *
      * @return possible object is {@link Object }
      *
@@ -179,7 +179,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the wfoOffice property.
+     * Sets the fromString of the wfoOffice property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -190,7 +190,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the taf property.
+     * Gets the fromString of the taf property.
      *
      * @return possible object is {@link Object }
      *
@@ -200,7 +200,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the taf property.
+     * Sets the fromString of the taf property.
      *
      * @param value
      *            allowed object is {@link Object }
@@ -211,7 +211,7 @@ public class SiteType {
     }
 
     /**
-     * Gets the value of the synops property.
+     * Gets the fromString of the synops property.
      *
      * @return possible object is {@link Object }
      *
@@ -221,7 +221,7 @@ public class SiteType {
     }
 
     /**
-     * Sets the value of the synops property.
+     * Sets the fromString of the synops property.
      *
      * @param value
      *            allowed object is {@link Object }

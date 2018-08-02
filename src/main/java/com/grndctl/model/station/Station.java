@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ public class Station {
     protected SiteType siteType;
 
     /**
-     * Gets the value of the stationId property.
+     * Gets the fromString of the stationId property.
      *
      * @return possible object is {@link String }
      *
@@ -95,7 +95,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the stationId property.
+     * Sets the fromString of the stationId property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -106,7 +106,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the wmoId property.
+     * Gets the fromString of the wmoId property.
      *
      * @return possible object is {@link String }
      *
@@ -116,7 +116,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the wmoId property.
+     * Sets the fromString of the wmoId property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -127,7 +127,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Gets the fromString of the latitude property.
      *
      */
     public float getLatitude() {
@@ -135,7 +135,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Sets the fromString of the latitude property.
      *
      */
     public void setLatitude(float value) {
@@ -143,7 +143,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Gets the fromString of the longitude property.
      *
      */
     public float getLongitude() {
@@ -151,7 +151,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Sets the fromString of the longitude property.
      *
      */
     public void setLongitude(float value) {
@@ -159,7 +159,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the elevationM property.
+     * Gets the fromString of the elevationM property.
      *
      */
     public float getElevationM() {
@@ -167,7 +167,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the elevationM property.
+     * Sets the fromString of the elevationM property.
      *
      */
     public void setElevationM(float value) {
@@ -175,7 +175,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the site property.
+     * Gets the fromString of the site property.
      *
      * @return possible object is {@link String }
      *
@@ -185,7 +185,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the site property.
+     * Sets the fromString of the site property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -196,7 +196,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the state property.
+     * Gets the fromString of the state property.
      *
      * @return possible object is {@link String }
      *
@@ -206,7 +206,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the state property.
+     * Sets the fromString of the state property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -217,7 +217,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the country property.
+     * Gets the fromString of the country property.
      *
      * @return possible object is {@link String }
      *
@@ -227,7 +227,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the country property.
+     * Sets the fromString of the country property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -238,7 +238,7 @@ public class Station {
     }
 
     /**
-     * Gets the value of the siteType property.
+     * Gets the fromString of the siteType property.
      *
      * @return possible object is {@link SiteType }
      *
@@ -248,7 +248,7 @@ public class Station {
     }
 
     /**
-     * Sets the value of the siteType property.
+     * Sets the fromString of the siteType property.
      *
      * @param value
      *            allowed object is {@link SiteType }

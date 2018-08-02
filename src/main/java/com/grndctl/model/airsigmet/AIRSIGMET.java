@@ -1,7 +1,7 @@
 /**
  * MIT License
  * <p>
- * Copyright (c) 2017 grndctl
+ * Copyright (c) 2018 grndctl-akka
  * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -89,7 +89,7 @@ public class AIRSIGMET {
     protected List<Area> area;
 
     /**
-     * Gets the value of the rawText property.
+     * Gets the fromString of the rawText property.
      *
      * @return possible object is {@link String }
      *
@@ -99,7 +99,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the rawText property.
+     * Sets the fromString of the rawText property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -110,7 +110,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the validTimeFrom property.
+     * Gets the fromString of the validTimeFrom property.
      *
      * @return possible object is {@link String }
      *
@@ -120,7 +120,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the validTimeFrom property.
+     * Sets the fromString of the validTimeFrom property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -131,7 +131,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the validTimeTo property.
+     * Gets the fromString of the validTimeTo property.
      *
      * @return possible object is {@link String }
      *
@@ -141,7 +141,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the validTimeTo property.
+     * Sets the fromString of the validTimeTo property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -152,7 +152,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the altitude property.
+     * Gets the fromString of the altitude property.
      *
      * @return possible object is {@link Altitude }
      *
@@ -162,7 +162,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the altitude property.
+     * Sets the fromString of the altitude property.
      *
      * @param value
      *            allowed object is {@link Altitude }
@@ -173,7 +173,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the movementDirDegrees property.
+     * Gets the fromString of the movementDirDegrees property.
      *
      * @return possible object is {@link BigInteger }
      *
@@ -183,7 +183,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the movementDirDegrees property.
+     * Sets the fromString of the movementDirDegrees property.
      *
      * @param value
      *            allowed object is {@link BigInteger }
@@ -194,7 +194,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the movementSpeedKt property.
+     * Gets the fromString of the movementSpeedKt property.
      *
      * @return possible object is {@link BigInteger }
      *
@@ -204,7 +204,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the movementSpeedKt property.
+     * Sets the fromString of the movementSpeedKt property.
      *
      * @param value
      *            allowed object is {@link BigInteger }
@@ -215,7 +215,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the hazard property.
+     * Gets the fromString of the hazard property.
      *
      * @return possible object is {@link Hazard }
      *
@@ -225,7 +225,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the hazard property.
+     * Sets the fromString of the hazard property.
      *
      * @param value
      *            allowed object is {@link Hazard }
@@ -236,7 +236,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the airsigmetType property.
+     * Gets the fromString of the airsigmetType property.
      *
      * @return possible object is {@link String }
      *
@@ -246,7 +246,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Sets the value of the airsigmetType property.
+     * Sets the fromString of the airsigmetType property.
      *
      * @param value
      *            allowed object is {@link String }
@@ -257,7 +257,7 @@ public class AIRSIGMET {
     }
 
     /**
-     * Gets the value of the area property.
+     * Gets the fromString of the area property.
      *
      * <p>
      * This accessor method returns a reference to the live list, not a
