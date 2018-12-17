@@ -6,8 +6,8 @@ import com.typesafe.scalalogging.LazyLogging
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.{Matchers, WordSpec}
-
 import scala.collection.JavaConverters._
+
 import scala.concurrent.duration._
 
 /**
@@ -23,7 +23,7 @@ trait BaseSpec extends WordSpec
 
   private val timeout = 5.seconds
 
-  val OM: ObjectMapper = new ObjectMapper()
+  val OM: ObjectMapper = new ObjectMapper
 
   def entityToType[T <: Object](clazz: Class[T]): T = OM.readValue(entityAs[String], clazz)
 

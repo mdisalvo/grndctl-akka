@@ -5,8 +5,8 @@ import com.grndctl.BaseSpec
 import com.grndctl.model.taf.{TAF, TimeType}
 import com.grndctl.services.TafSvc
 
-import scala.collection.JavaConverters._
 import scala.concurrent.Future
+import scala.collection.JavaConverters._
 
 /**
   * @author Michael Di Salvo

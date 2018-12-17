@@ -49,9 +49,7 @@ class Registry(config: Config)
   lazy val server: HttpServer = loadServer()
 
   private def loadServer(): HttpServer = {
-    val swaggerRoutes: Route = new SwaggerController(config.httpHost, config.httpPort).routes
     val routes: Route = handleRejections(RejectionHandler.default) {
-      swaggerRoutes                ~
         metarController.route      ~
         stationController.route    ~
         tafController.route        ~

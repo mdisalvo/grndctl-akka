@@ -8,6 +8,7 @@ import com.grndctl.model.aggregates.{ConversionResult, WindComponent}
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.commons.lang3.math.Fraction._
 
+
 /**
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com

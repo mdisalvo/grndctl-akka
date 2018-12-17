@@ -25,8 +25,6 @@ package com.grndctl.model.taf;
 
 import scala.Option;
 
-import java.util.Objects;
-
 /**
  * <p>
  * Possible time type parameters for retrieving a {@link TAF}.

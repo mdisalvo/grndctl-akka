@@ -30,8 +30,6 @@
 
 package com.grndctl.model.aircraftrep;
 
-import com.google.common.base.Objects;
-
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -2,8 +2,8 @@ package com.grndctl.services
 
 import java.net.URL
 
-import com.grndctl.model._
 import com.grndctl.misc.InputStreamUnmarshaller
+import com.grndctl.model._
 import com.grndctl.model.aircraftrep.{AircraftReport, ReportType}
 import com.typesafe.scalalogging.LazyLogging
 
