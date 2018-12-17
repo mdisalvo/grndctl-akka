@@ -1,8 +1,8 @@
 package com.grndctl.controllers
 
+import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
-import akka.http.scaladsl.model.StatusCodes._
 import com.grndctl.misc.HttpResponseSupport
 import com.grndctl.model.taf.{TAF, TimeType}
 import com.grndctl.services.TafSvc

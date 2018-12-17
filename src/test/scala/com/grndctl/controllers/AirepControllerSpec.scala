@@ -5,8 +5,8 @@ import com.grndctl.BaseSpec
 import com.grndctl.model.aircraftrep.{AircraftReport, ReportType}
 import com.grndctl.services.AirepSvc
 
-import scala.collection.JavaConverters._
 import scala.concurrent.Future
+import scala.collection.JavaConverters._
 
 /**
   * @author Michael Di Salvo
