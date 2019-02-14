@@ -17,6 +17,7 @@
 | `GET: /conversions/CtoF` | Convert temp C to tempF | tempC(r)::double | ConversionResult | GET /conversions/CtoF?tempC=0 | 200::OK <br> 400::BadRequest |
 | `GET: /conversions/inchesToMillibars` | Convert pressure from inches of mercury to millibars | pressInches(r)::double | ConversionResult | GET /conversions/inchesToMillibars?pressInches=29.92 | 200::OK <br> 400::BadRequest |
 | `GET: /conversions/millibarsToInches` | Convert pressure from millibars to inches of mercury | pressMillis(r)::double | ConversionResult | GET /conversions/millibarsToInches?pressMillis=1013.2 | 200::OK <br> 400::BadRequest |
+| `GET: /conversions/windcomponent` | Determine windcomponent given windspeed(Kts), wind direction(From) and heading | windspeed(r)::double <br> winddirection(r)::double <br> heading(r)::double | WindComponent | GET /conversions/windcomponent?windspeed=10&winddirection=210&heading=350 |200::OK <br> 400::BadRequest |
 |*__METARs__* | | | | |
 | `GET: /metar/{icaoCode}` | Get METARs by ICAO code | hrsBefore::double | [METAR] | GET /metar/KIAD?hrsBefore=2.0 | 200::OK <br> 400::BadRequest <br> 404::NotFound |
 |*__Navaids__* | | | | |

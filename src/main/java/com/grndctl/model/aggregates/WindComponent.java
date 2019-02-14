@@ -23,6 +23,8 @@
  */
 package com.grndctl.model.aggregates;
 
+import com.google.common.base.Objects;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,5 +72,19 @@ public class WindComponent {
 
     public void setCrossWind(double crossWind) {
         this.crossWind = crossWind;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WindComponent that = (WindComponent) o;
+        return Double.compare(that.headWind, headWind) == 0 &&
+                Double.compare(that.crossWind, crossWind) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(headWind, crossWind);
     }
 }

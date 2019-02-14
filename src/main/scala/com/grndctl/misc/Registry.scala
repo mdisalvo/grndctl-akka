@@ -44,7 +44,7 @@ class Registry(config: Config)
   lazy val notamService: NotamSvc = new NotamSvc()
   lazy val notamController: NotamController = new NotamController(notamService)
 
-  lazy val docsController: Docs = new Docs
+  lazy val docsController: DocsController = new DocsController
 
   lazy val server: HttpServer = loadServer()
 

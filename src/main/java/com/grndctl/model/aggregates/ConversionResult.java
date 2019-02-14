@@ -23,6 +23,8 @@
  */
 package com.grndctl.model.aggregates;
 
+import com.google.common.base.Objects;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,5 +92,20 @@ public class ConversionResult {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ConversionResult that = (ConversionResult) o;
+        return Objects.equal(value, that.value) &&
+                Objects.equal(unit, that.unit) &&
+                Objects.equal(result, that.result);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(value, unit, result);
     }
 }

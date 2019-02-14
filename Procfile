@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/scala-2.12/grndctl-akka-assembly-1.0.0.jar
