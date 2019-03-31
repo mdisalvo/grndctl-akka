@@ -1,4 +1,4 @@
-# grndctl-akka API Documentation
+# grndctl-akka API Documentation [![Build Status](https://travis-ci.org/mdisalvo/grndctl-akka.svg)](https://travis-ci.org/mdisalvo/grndctl-akka)
 ##### michael.vincent.disalvo@gmail.com
 
 | Verb: Endpoint | Description | Params  | Response Entity | Example | Response Codes |
