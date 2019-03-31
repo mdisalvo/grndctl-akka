@@ -21,9 +21,9 @@ class TafController(tafSvc: TafSvc)
   val route: Route =
     pathPrefix("taf") {
       pathPrefix(Segment) { stationId =>
-        parameters('hrsBefore ? "2.0", 'timeType ? TimeType.VALID.valueOf()) { (hrsBefore, timeType) =>
+        parameters('hrsBefore.as[Double] ? 2.0, 'timeType ? TimeType.VALID.valueOf()) { (hrsBefore, timeType) =>
           validate(TimeType.fromString(timeType).isDefined, s"Invalid TimeType $timeType.") {
-            getTafs(stationId, hrsBefore.toDouble, TimeType.fromString(timeType).get)
+            getTafs(stationId, hrsBefore, TimeType.fromString(timeType).get)
           }
         }
       }

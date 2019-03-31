@@ -9,6 +9,7 @@ import com.grndctl.services.MetarSvc
 import com.typesafe.scalalogging.LazyLogging
 
 import scala.concurrent.ExecutionContext
+import scala.util.Try
 
 /**
   * @author Michael Di Salvo
@@ -21,8 +22,8 @@ class MetarController(metarService: MetarSvc)
   val route: Route =
     pathPrefix("metar") {
       pathPrefix(Segment) { stationId =>
-        parameter('hrsBefore.?) {
-          case Some(hrsBefore) => getMetars(stationId, hrsBefore.toDouble)
+        parameter('hrsBefore.as[Double].?) {
+          case Some(hrsBefore) => getMetars(stationId, hrsBefore)
           case None => getCurrentMetar(stationId)
         }
       }

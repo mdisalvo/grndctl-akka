@@ -173,3 +173,24 @@ object SchemaGenerator {
     Files.write(swaggerFile, schemaYaml.getBytes)
   }
 }
+
+// Coredns config-map
+// mv /run/systemd/resolve/stub-resolv.conf stub-resolv.conf.bak
+// touch stub-resolv.conf
+// copy contents of /run/systemd/resolve/resolv.conf
+// Update coredns config-map
+.:53 {
+    errors
+    health
+    kubernetes cluster.local in-addr.arpa ip6.arpa {
+       pods insecure
+       upstream
+       fallthrough in-addr.arpa ip6.arpa
+    }
+    prometheus :9153
+    proxy . /etc/resolv.conf
+    cache 30
+    loop
+    reload
+    loadbalance
+}
