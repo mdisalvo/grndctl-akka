@@ -1,5 +1,6 @@
 package com.grndctl.controllers
 
+import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.server.Route
 import com.grndctl.BaseSpec
 import com.grndctl.model.aircraftrep.{AircraftReport, ReportType}
@@ -34,14 +35,14 @@ class AirepControllerSpec extends BaseSpec {
         .returning(Future(validAirepSeq))
       Get(s"/airep?hrsBefore=$hrsBefore&reportType=AIREP") ~> Route.seal(airepRoute) ~> check {
         val expected: AircraftReport = validAirepSeq.head
-        val actual: AircraftReport = entityToCollectionType(classOf[AircraftReport]).head
+        val actual: AircraftReport = entityAsSeqType(classOf[AircraftReport]).head
         expected shouldEqual actual
       }
     }
 
     s"return 400/Bad Request from GET:/airep?hrsBefore=two&reportType=FAKE" in {
       Get(s"/airep?hrsBefore=two&reportType=FAKE") ~> Route.seal(airepRoute) ~> check {
-        response.status.intValue shouldEqual 400
+        response.status shouldBe BadRequest
       }
     }
 

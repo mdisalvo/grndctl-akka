@@ -2,6 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: {{ include "grndctl.name" . }}
+  namespace: grndctl
   labels:
     app.kubernetes.io/name: {{ include "grndctl.name" . }}
     helm.sh/chart: {{ include "grndctl.chart" . }}

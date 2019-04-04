@@ -29,7 +29,7 @@ dockerRepository := Some("michaelvdisalvo")
 lazy val grndctl = (project in file("."))
   .settings(
     organization := "com.grndctl",
-    version := "1.0.0-SNAPSHOT",
+    version := "1.0.0",
     name := "grndctl-akka",
     description := """An Aviators API""",
     scalaVersion := "2.12.5",

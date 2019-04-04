@@ -19,9 +19,9 @@ class AirepController(airepService: AirepSvc)
 
   val route: Route =
     pathPrefix("airep") {
-      parameters('hrsBefore, 'reportType ? ReportType.AIREP.toString) { (hrsBefore, reportType) =>
+      parameters('hrsBefore.as[Double], 'reportType ? ReportType.AIREP.toString) { (hrsBefore, reportType) =>
         validate(ReportType.fromString(reportType).isDefined, s"Invalid ReportType $reportType.") {
-          getAireps(hrsBefore.toDouble, ReportType.fromString(reportType).get)
+          getAireps(hrsBefore, ReportType.fromString(reportType).get)
         }
       }
     }

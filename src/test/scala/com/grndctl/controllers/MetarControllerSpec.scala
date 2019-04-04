@@ -1,5 +1,6 @@
 package com.grndctl.controllers
 
+import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.server.Route
 import com.grndctl.BaseSpec
 import com.grndctl.model.metar.METAR
@@ -29,8 +30,9 @@ class MetarControllerSpec extends BaseSpec {
         .expects(stationId)
         .returning(Future(validMetarSeq))
       Get(s"/metar/$stationId") ~> Route.seal(metarRoute) ~> check {
+        response.status shouldBe OK
         val expected: METAR = validMetarSeq.head
-        val actual: METAR = entityToCollectionType(classOf[METAR]).head
+        val actual: METAR = entityAsSeqType(classOf[METAR]).head
         expected shouldEqual actual
       }
     }
@@ -40,8 +42,9 @@ class MetarControllerSpec extends BaseSpec {
         .expects(stationId, hrsBefore)
         .returning(Future(validMetarSeq))
       Get(s"/metar/$stationId?hrsBefore=$hrsBefore") ~> Route.seal(metarRoute) ~> check {
+        response.status shouldBe OK
         val expected: Seq[METAR] = validMetarSeq
-        val actual: Seq[METAR] = entityToCollectionType(classOf[METAR])
+        val actual: Seq[METAR] = entityAsSeqType(classOf[METAR])
         expected shouldEqual actual
       }
     }
@@ -53,7 +56,7 @@ class MetarControllerSpec extends BaseSpec {
       Get(s"/metar/XXXX?hrsBefore=$hrsBefore") ~> Route.seal(metarRoute) ~> check {
         val expected: String = "Station with ICAO id XXXX?hrsBefore=3.0 Not Found"
         val actual: String = responseAs[String]
-        response.status.intValue() shouldEqual 404
+        response.status shouldBe NotFound
         expected shouldEqual actual
       }
     }

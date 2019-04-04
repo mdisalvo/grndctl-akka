@@ -22,12 +22,6 @@ class ChartsSvc(implicit ec: ExecutionContext) extends AutoClose with LazyLoggin
 
   private val ThanksKey = "Thanks"
 
-  /**
-    *
-    *
-    * @param station
-    * @return
-    */
   def getStationCharts(station: String): Future[String] = {
     Future {
       val urlConn = new URL(s"$AirchartsUrl$station")

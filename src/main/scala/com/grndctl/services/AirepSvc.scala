@@ -22,18 +22,11 @@ class AirepSvc(implicit ec: ExecutionContext)
 
   private val HrsBefore: String = "&hoursBeforeNow="
 
-  /**
-    *
-    *
-    * @param hrsBefore
-    * @param reportType
-    * @return
-    */
   def getAircraftReports(hrsBefore: Double, reportType: ReportType): Future[Seq[AircraftReport]] = {
     unmarshall(new URL(RequestUrl + HrsBefore + hrsBefore))
       .map(_.getData.getAircraftReport.asScala)
       .recover {
-        case e: Exception =>
+        case _: Exception =>
           logger.error(ErrorMessage)
           Seq.empty
       }

@@ -21,7 +21,7 @@
         </style>
     </head>
     <body>
-    <h1 id="grndctl-akka-api-documentation">grndctl-akka API Documentation <br> <h5>michael.vincent.disalvo@gmail.com</h5> </h1>
+    <h1 id="grndctl-akka-api-documentation">grndctl-akka API Documentation <a href="https://travis-ci.org/mdisalvo/grndctl-akka"><img src="https://travis-ci.org/mdisalvo/grndctl-akka.svg?branch=master" alt="Build Status" /></a> <br> <h5>michael.vincent.disalvo@gmail.com</h5> </h1>
 <table>
 <thead>
 <tr>
@@ -144,6 +144,14 @@
 <td style="text-align:left">pressMillis(r)::double</td>
 <td style="text-align:left">ConversionResult</td>
 <td style="text-align:left">GET /conversions/millibarsToInches?pressMillis=1013.2</td>
+<td style="text-align:left">200::OK <br> 400::BadRequest</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET: /conversions/windcomponent</code></td>
+<td style="text-align:left">Determine windcomponent given windspeed(Kts), wind direction(From) and heading</td>
+<td style="text-align:left">windspeed(r)::double <br> winddirection(r)::double <br> heading(r)::double</td>
+<td style="text-align:left">WindComponent</td>
+<td style="text-align:left">GET /conversions/windcomponent?windspeed=10&winddirection=210&heading=350</td>
 <td style="text-align:left">200::OK <br> 400::BadRequest</td>
 </tr>
 <tr>
