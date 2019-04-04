@@ -25,6 +25,7 @@ maintainer in Docker := "Michael DiSalvo <michael.vincent.disalvo@gmail.com>"
 packageSummary in Docker := "An Aviators Container"
 dockerBaseImage := "openjdk:8u171-jdk"
 dockerRepository := Some("michaelvdisalvo")
+dockerUpdateLatest := true
 
 lazy val grndctl = (project in file("."))
   .settings(
