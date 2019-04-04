@@ -7,6 +7,7 @@ import akka.stream.ActorMaterializer
 import com.grndctl.controllers._
 import com.grndctl.services._
 
+
 import scala.concurrent.{ExecutionContext, ExecutionContextExecutor}
 
 /**
@@ -17,34 +18,35 @@ class Registry(config: Config)
               (implicit val actorSystem: ActorSystem,
                implicit val materializer: ActorMaterializer,
                implicit val executionContext: ExecutionContextExecutor) {
+  import ExecutionContexts._
 
-  lazy val stationService: StationSvc = new StationSvc()
-  lazy val stationController: StationController = new StationController(stationService)
+  lazy val stationService: StationSvc = new StationSvc()(svcContext)
+  lazy val stationController: StationController = new StationController(stationService)(httpContext)
 
-  lazy val metarService: MetarSvc = new MetarSvc()
-  lazy val metarController: MetarController = new MetarController(metarService)
+  lazy val metarService: MetarSvc = new MetarSvc()(svcContext)
+  lazy val metarController: MetarController = new MetarController(metarService)(httpContext)
 
-  lazy val tafService: TafSvc = new TafSvc()
-  lazy val tafController: TafController = new TafController(tafService)
+  lazy val tafService: TafSvc = new TafSvc()(svcContext)
+  lazy val tafController: TafController = new TafController(tafService)(httpContext)
 
-  lazy val airepService: AirepSvc = new AirepSvc()
-  lazy val airepController: AirepController = new AirepController(airepService)
+  lazy val airepService: AirepSvc = new AirepSvc()(svcContext)
+  lazy val airepController: AirepController = new AirepController(airepService)(httpContext)
 
-  lazy val conversionController: ConversionController = new ConversionController()
+  lazy val conversionController: ConversionController = new ConversionController
 
-  lazy val chartsService: ChartsSvc = new ChartsSvc()
-  lazy val chartsController: ChartsController = new ChartsController(chartsService)
+  lazy val chartsService: ChartsSvc = new ChartsSvc()(svcContext)
+  lazy val chartsController: ChartsController = new ChartsController(chartsService)(httpContext)
 
-  val airlineService: AirlineSvc = AirlineSvc.apply
-  lazy val airlineController: AirlineController = new AirlineController(airlineService)
+  val airlineService: AirlineSvc = AirlineSvc.apply(svcContext)
+  lazy val airlineController: AirlineController = new AirlineController(airlineService)(httpContext)
 
-  val navaidService: NavaidSvc = NavaidSvc.apply
-  lazy val navaidController = new NavaidController(navaidService)
+  val navaidService: NavaidSvc = NavaidSvc.apply(svcContext)
+  lazy val navaidController = new NavaidController(navaidService)(httpContext)
 
-  lazy val notamService: NotamSvc = new NotamSvc()
-  lazy val notamController: NotamController = new NotamController(notamService)
+  lazy val notamService: NotamSvc = new NotamSvc()(svcContext)
+  lazy val notamController: NotamController = new NotamController(notamService)(httpContext)
 
-  lazy val docsController: DocsController = new DocsController
+  lazy val docsController: DocsController = new DocsController()(httpContext)
 
   lazy val server: HttpServer = loadServer()
 
@@ -67,7 +69,6 @@ class Registry(config: Config)
   object ExecutionContexts {
     val svcContext: ExecutionContext = actorSystem.dispatchers.lookup("service-context")
     val httpContext: ExecutionContext = actorSystem.dispatchers.lookup("http-context")
-    val actorContext: ExecutionContext = actorSystem.dispatchers.lookup("actor-context")
   }
 
 }
