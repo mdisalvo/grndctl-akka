@@ -31,6 +31,7 @@
 package com.grndctl.model.station;
 
 
+import com.google.common.base.Objects;
 import com.grndctl.model.metar.METAR;
 import com.grndctl.model.taf.TAF;
 
@@ -231,4 +232,22 @@ public class SiteType {
         this.synops = value;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SiteType)) return false;
+        SiteType siteType = (SiteType) o;
+        return Objects.equal(metar, siteType.metar) &&
+                Objects.equal(nexrad, siteType.nexrad) &&
+                Objects.equal(rawinsonde, siteType.rawinsonde) &&
+                Objects.equal(windProfiler, siteType.windProfiler) &&
+                Objects.equal(wfoOffice, siteType.wfoOffice) &&
+                Objects.equal(taf, siteType.taf) &&
+                Objects.equal(synops, siteType.synops);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(metar, nexrad, rawinsonde, windProfiler, wfoOffice, taf, synops);
+    }
 }

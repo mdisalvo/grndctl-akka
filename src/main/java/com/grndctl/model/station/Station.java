@@ -30,6 +30,8 @@
 
 package com.grndctl.model.station;
 
+import com.google.common.base.Objects;
+
 import javax.xml.bind.annotation.*;
 
 /**
@@ -258,4 +260,24 @@ public class Station {
         this.siteType = value;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Station)) return false;
+        Station station = (Station) o;
+        return Float.compare(station.latitude, latitude) == 0 &&
+                Float.compare(station.longitude, longitude) == 0 &&
+                Float.compare(station.elevationM, elevationM) == 0 &&
+                Objects.equal(stationId, station.stationId) &&
+                Objects.equal(wmoId, station.wmoId) &&
+                Objects.equal(site, station.site) &&
+                Objects.equal(state, station.state) &&
+                Objects.equal(country, station.country) &&
+                Objects.equal(siteType, station.siteType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(stationId, wmoId, latitude, longitude, elevationM, site, state, country, siteType);
+    }
 }
