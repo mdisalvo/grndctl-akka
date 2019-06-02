@@ -868,4 +868,27 @@ trait BaseSpec extends WordSpec
       |]
     """.stripMargin
 
+  val validStationSeqStr: String =
+    """
+      |[{
+      |  "stationId": "KDEN",
+      |  "wmoId": "72565",
+      |  "latitude": 39.85,
+      |  "longitude": -104.65,
+      |  "elevationM": 1640,
+      |  "site": "DENVER (DIA)",
+      |  "state": "CO",
+      |  "country": "US",
+      |  "siteType": {
+      |    "metar": null,
+      |    "nexrad": null,
+      |    "rawinsonde": null,
+      |    "windProfiler": null,
+      |    "taf": null,
+      |    "synops": null,
+      |    "wfooffice": null
+      |  }
+      |}]
+    """.stripMargin
+
 }
