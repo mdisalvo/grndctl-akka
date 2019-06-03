@@ -30,7 +30,7 @@ dockerUpdateLatest := true
 lazy val grndctl = (project in file("."))
   .settings(
     organization := "com.grndctl",
-    version := "1.0.1",
+    version := "1.0.2",
     name := "grndctl-akka",
     description := """An Aviators API""",
     scalaVersion := "2.12.5",
