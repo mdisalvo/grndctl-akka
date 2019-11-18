@@ -21,10 +21,7 @@ class AirlineControllerSpec extends BaseSpec {
   val airlineIata: String = "UA"
 
   val validAirlineSeq: Seq[Airline] =
-    OM.readValue(
-      validAirlineStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[Airline]], classOf[Airline])
-    ).asInstanceOf[java.util.List[Airline]].asScala
+    strToSeqOfType(validAirlineStr, classOf[Airline])
 
   "The Airline Controller" should {
 

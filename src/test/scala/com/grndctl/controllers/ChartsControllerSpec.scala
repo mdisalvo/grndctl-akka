@@ -40,5 +40,4 @@ class ChartsControllerSpec extends BaseSpec {
 
   }
 
-
 }

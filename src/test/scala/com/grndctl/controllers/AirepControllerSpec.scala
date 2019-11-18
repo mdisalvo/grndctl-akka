@@ -20,12 +20,8 @@ class AirepControllerSpec extends BaseSpec {
   val hrsBefore: Double = 2.0
   val reportType: ReportType = ReportType.AIREP
 
-  // More ugs-ma-gugs.
   val validAirepSeq: Seq[AircraftReport] =
-    OM.readValue(
-      validAirepStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[AircraftReport]], classOf[AircraftReport])
-    ).asInstanceOf[java.util.List[AircraftReport]].asScala
+    strToSeqOfType(validAirepStr, classOf[AircraftReport])
 
   "The AIREP Controller" should {
 
@@ -33,9 +29,12 @@ class AirepControllerSpec extends BaseSpec {
       (airepSvc.getAircraftReports _)
         .expects(hrsBefore, reportType)
         .returning(Future(validAirepSeq))
-      Get(s"/airep?hrsBefore=$hrsBefore&reportType=AIREP") ~> Route.seal(airepRoute) ~> check {
+      Get(s"/airep?hrsBefore=$hrsBefore&reportType=AIREP") ~> Route.seal(
+        airepRoute
+      ) ~> check {
         val expected: AircraftReport = validAirepSeq.head
-        val actual: AircraftReport = entityAsSeqType(classOf[AircraftReport]).head
+        val actual: AircraftReport =
+          entityAsSeqType(classOf[AircraftReport]).head
         expected shouldEqual actual
       }
     }
@@ -47,6 +46,5 @@ class AirepControllerSpec extends BaseSpec {
     }
 
   }
-
 
 }

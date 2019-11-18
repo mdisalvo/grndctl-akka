@@ -14,25 +14,28 @@ import scala.util.{Failure, Success}
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-class HttpServer(routes: Route, interface: String, port: Int)
-                (implicit val actorSystem: ActorSystem,
-                 implicit val materializer: ActorMaterializer,
-                 implicit val executor: ExecutionContextExecutor) extends LazyLogging {
+class HttpServer(routes: Route, interface: String, port: Int)(
+    implicit val actorSystem: ActorSystem,
+    implicit val materializer: ActorMaterializer,
+    implicit val executor: ExecutionContextExecutor
+) extends LazyLogging {
 
   var serverBinding: Future[ServerBinding] = _
 
   def startServer(): Unit = {
-    serverBinding = Http().bindAndHandle(routes, interface, port, new HttpConnectionContext())
+    serverBinding =
+      Http().bindAndHandle(routes, interface, port, new HttpConnectionContext())
     serverBinding.onComplete {
       case Success(binding) =>
-      case Failure(t) => logger.error(s"Failed to start server: ${t.getMessage}")
+      case Failure(t) =>
+        logger.error(s"Failed to start server: ${t.getMessage}")
     }
   }
 
   def shutdown(): Unit = {
     serverBinding.onComplete {
       case Success(binding) => binding.unbind()
-      case Failure(t) => logger.error(s"Failed to shutdown: ${t.getMessage}")
+      case Failure(t)       => logger.error(s"Failed to shutdown: ${t.getMessage}")
     }
   }
 

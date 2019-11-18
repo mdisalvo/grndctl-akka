@@ -15,14 +15,21 @@ import scala.concurrent.{ExecutionContext, Future}
   * michael.vincent.disalvo@gmail.com
   */
 class AirepSvc(implicit ec: ExecutionContext)
-  extends InputStreamUnmarshaller[aircraftrep.Response](classOf[aircraftrep.Response]) with LazyLogging {
+    extends InputStreamUnmarshaller[aircraftrep.Response](
+      classOf[aircraftrep.Response]
+    )
+    with LazyLogging {
 
-  private val RequestUrl: String = "https://aviationweather.gov/adds/dataserver_current/httpparam?" +
-    "datasource=aircraftreports&requesttype=retrieve&format=xml"
+  private val RequestUrl: String =
+    "https://aviationweather.gov/adds/dataserver_current/httpparam?" +
+      "datasource=aircraftreports&requesttype=retrieve&format=xml"
 
   private val HrsBefore: String = "&hoursBeforeNow="
 
-  def getAircraftReports(hrsBefore: Double, reportType: ReportType): Future[Seq[AircraftReport]] = {
+  def getAircraftReports(
+      hrsBefore: Double,
+      reportType: ReportType
+  ): Future[Seq[AircraftReport]] = {
     unmarshall(new URL(RequestUrl + HrsBefore + hrsBefore))
       .map(_.getData.getAircraftReport.asScala)
       .recover {

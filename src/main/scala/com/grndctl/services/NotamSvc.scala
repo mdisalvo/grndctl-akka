@@ -20,7 +20,11 @@ class NotamSvc(implicit ec: ExecutionContext) extends LazyLogging {
   private val User_Agent = "akka-http/10.1.3"
   private val Notam_Right = "notamRight"
 
-  def getNotamsForCodes(codes: Seq[String], reportType: Notam.ReportType, formatType: Notam.FormatType): Future[Seq[String]] = {
+  def getNotamsForCodes(
+      codes: Seq[String],
+      reportType: Notam.ReportType,
+      formatType: Notam.FormatType
+  ): Future[Seq[String]] = {
     val icaoString = codes.mkString(",")
     Future(
       Jsoup
@@ -33,7 +37,9 @@ class NotamSvc(implicit ec: ExecutionContext) extends LazyLogging {
         .userAgent(User_Agent)
         .timeout(5000)
         .get
-        .getElementsByAttributeValue("id", Notam_Right).asScala.map(_.text)
+        .getElementsByAttributeValue("id", Notam_Right)
+        .asScala
+        .map(_.text)
     )
   }
 }

@@ -33,7 +33,7 @@ lazy val grndctl = (project in file("."))
     version := "1.0.2",
     name := "grndctl-akka",
     description := """An Aviators API""",
-    scalaVersion := "2.12.5",
+    scalaVersion := "2.12.8",
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature"),
     libraryDependencies ++= common ++ akka ++ test
   ).enablePlugins(JavaAppPackaging)

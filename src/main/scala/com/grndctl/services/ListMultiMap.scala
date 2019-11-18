@@ -21,6 +21,7 @@ class ListMultiMap[A, B] {
 
   def toMap: Map[A, Seq[B]] = m.map(e => e._1 -> e._2).toMap
 
-  override def toString: String = m.map { case (k, v) => (k, v.toList.mkString("[", ", ", "]")) }.toString
+  override def toString: String =
+    m.map { case (k, v) => (k, v.toList.mkString("[", ", ", "]")) }.toString
 
 }

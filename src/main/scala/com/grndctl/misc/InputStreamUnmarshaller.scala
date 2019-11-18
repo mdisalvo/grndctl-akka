@@ -19,11 +19,14 @@ import scala.concurrent.{ExecutionContext, Future}
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-abstract class InputStreamUnmarshaller[T](respType: Class[T]) extends LazyLogging with AutoClose {
+abstract class InputStreamUnmarshaller[T](respType: Class[T])
+    extends LazyLogging
+    with AutoClose {
 
   val OM: ObjectMapper = new ObjectMapper
 
-  protected val ErrorMessage: String = "Exception when unmarshalling entity from ADDS Service."
+  protected val ErrorMessage: String =
+    "Exception when unmarshalling entity from ADDS Service."
 
   def unmarshall(url: URL)(implicit ec: ExecutionContext): Future[T] = Future {
     autoClose(url.openStream()) {
@@ -33,5 +36,3 @@ abstract class InputStreamUnmarshaller[T](respType: Class[T]) extends LazyLoggin
   }
 
 }
-
-

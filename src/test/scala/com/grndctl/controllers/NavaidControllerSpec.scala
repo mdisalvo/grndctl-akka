@@ -10,9 +10,9 @@ import scala.collection.JavaConverters._
 import scala.concurrent.Future
 
 /**
- * @author Michael Di Salvo
- * michael.vincent.disalvo@gmail.com
- */
+  * @author Michael Di Salvo
+  * michael.vincent.disalvo@gmail.com
+  */
 class NavaidControllerSpec extends BaseSpec {
 
   val navaidSvc: NavaidSvc = mock[NavaidSvc]
@@ -21,18 +21,21 @@ class NavaidControllerSpec extends BaseSpec {
   val navaidStation: String = "KIAD"
 
   val validNavaidSeqMultiMap: Map[String, Seq[Navaid]] =
-    OM.readValue (
-      validNavaidSeqMultiMapStr,
-      OM.getTypeFactory.constructMapType(
-        classOf[java.util.Map[String, java.util.List[Navaid]]], classOf[String], classOf[java.util.List[Navaid]]
+    OM.readValue(
+        validNavaidSeqMultiMapStr,
+        OM.getTypeFactory.constructMapType(
+          classOf[java.util.Map[String, java.util.List[Navaid]]],
+          classOf[String],
+          classOf[java.util.List[Navaid]]
+        )
       )
-    ).asInstanceOf[java.util.Map[String, java.util.List[Navaid]]].asScala.map(e => (e._1, e._2.asScala)).toMap
+      .asInstanceOf[java.util.Map[String, java.util.List[Navaid]]]
+      .asScala
+      .map(e => (e._1, e._2.asScala))
+      .toMap
 
   val validNavaidSeq: Seq[Navaid] =
-    OM.readValue(
-      validNavaidSeqStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[Navaid]], classOf[Navaid])
-    ).asInstanceOf[java.util.List[Navaid]].asScala
+    strToSeqOfType(validNavaidSeqStr, classOf[Navaid])
 
   "The Navaid Controller" should {
 

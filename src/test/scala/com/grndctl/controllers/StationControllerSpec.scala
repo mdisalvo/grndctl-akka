@@ -17,15 +17,12 @@ class StationControllerSpec extends BaseSpec {
   val invalidStation: String = "XXXX"
 
   val validStationSeq: Seq[Station] =
-    OM.readValue(
-      validStationSeqStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[Station]], classOf[Station])
-    ).asInstanceOf[java.util.List[Station]].asScala
+    strToSeqOfType(validStationSeqStr, classOf[Station])
 
   s"return 200/[Station] from GET:/station/adds/$station" in {
     (stationSvc.getStationInfo _)
-        .expects(station)
-        .returning(Future(validStationSeq))
+      .expects(station)
+      .returning(Future(validStationSeq))
     Get(s"/station/adds/$station") ~> stationRoute ~> check {
       response.status shouldBe OK
       val expected: Seq[Station] = validStationSeq

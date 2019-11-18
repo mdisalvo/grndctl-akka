@@ -14,11 +14,14 @@ import scala.concurrent.{ExecutionContext, Future}
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-class ChartsSvc(implicit ec: ExecutionContext) extends AutoClose with LazyLogging {
+class ChartsSvc(implicit ec: ExecutionContext)
+    extends AutoClose
+    with LazyLogging {
 
   private val AirchartsUrl = "https://api.aircharts.org/v2/Airport/"
 
-  private val ThanksValue = "All information retrieved from AirCharts at http://www.aircharts.org"
+  private val ThanksValue =
+    "All information retrieved from AirCharts at http://www.aircharts.org"
 
   private val ThanksKey = "Thanks"
 
@@ -30,12 +33,13 @@ class ChartsSvc(implicit ec: ExecutionContext) extends AutoClose with LazyLoggin
       urlConn.setRequestProperty("User-Agent", "akka-http/10.1.3")
       autoClose(urlConn.getInputStream) { s =>
         autoClose(new InputStreamReader(s)) { isr =>
-          new JSONObject(CharStreams.toString(isr)).put(ThanksKey, ThanksValue).toString
+          new JSONObject(CharStreams.toString(isr))
+            .put(ThanksKey, ThanksValue)
+            .toString
         }
       }
     }.recover {
-      case fnf: FileNotFoundException =>
-        "Not Found"
+      case fnf: FileNotFoundException => "Not Found"
     }
   }
 

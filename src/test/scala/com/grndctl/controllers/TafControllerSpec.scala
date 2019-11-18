@@ -21,12 +21,7 @@ class TafControllerSpec extends BaseSpec {
   val stationId: String = "KDEN"
   val invalidId: String = "XXXX"
 
-  // This is ugly but necessary to convert from the LinkedHashMap representation of a TAF.
-  val validTafSeq: Seq[TAF] =
-    OM.readValue(
-      validTafStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[TAF]], classOf[TAF])
-    ).asInstanceOf[java.util.List[TAF]].asScala
+  val validTafSeq: Seq[TAF] = strToSeqOfType(validTafStr, classOf[TAF])
 
   "The TAF controller" should {
 
@@ -34,7 +29,9 @@ class TafControllerSpec extends BaseSpec {
       (tafSvc.getTafs _)
         .expects(stationId, hrsBefore, TimeType.VALID)
         .returning(Future(validTafSeq))
-      Get(s"/taf/$stationId?hrsBefore=$hrsBefore&timeType=valid") ~> Route.seal(tafRoute) ~> check {
+      Get(s"/taf/$stationId?hrsBefore=$hrsBefore&timeType=valid") ~> Route.seal(
+        tafRoute
+      ) ~> check {
         response.status shouldBe OK
         val expected: TAF = validTafSeq.head
         val actual: TAF = entityAsSeqType(classOf[TAF]).head
@@ -46,7 +43,9 @@ class TafControllerSpec extends BaseSpec {
       (tafSvc.getTafs _)
         .expects(invalidId, hrsBefore, TimeType.VALID)
         .returning(Future.successful(Seq.empty))
-      Get(s"/taf/$invalidId?hrsBefore=$hrsBefore&timeType=valid") ~> Route.seal(tafRoute) ~> check {
+      Get(s"/taf/$invalidId?hrsBefore=$hrsBefore&timeType=valid") ~> Route.seal(
+        tafRoute
+      ) ~> check {
         response.status shouldBe NotFound
       }
     }

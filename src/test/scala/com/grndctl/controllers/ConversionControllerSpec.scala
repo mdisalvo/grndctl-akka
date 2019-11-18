@@ -57,7 +57,8 @@ class ConversionControllerSpec extends BaseSpec with ConversionUtility {
     }
 
     s"return 400/ BadRequest from GET:/conversions/inchesToMillibars?pressInches=pressInches" in {
-      Get("/conversions/inchesToMillibars?pressInches=pressInches") ~> Route.seal(convRoute) ~> check {
+      Get("/conversions/inchesToMillibars?pressInches=pressInches") ~> Route
+        .seal(convRoute) ~> check {
         response.status shouldBe BadRequest
       }
     }
@@ -72,13 +73,16 @@ class ConversionControllerSpec extends BaseSpec with ConversionUtility {
     }
 
     s"return 400/ BadRequest from GET:/conversions/millibarsToInches?pressMillis=pressMillis" in {
-      Get("/conversions/millibarsToInches?pressMillis=pressMillis") ~> Route.seal(convRoute) ~> check {
+      Get("/conversions/millibarsToInches?pressMillis=pressMillis") ~> Route
+        .seal(convRoute) ~> check {
         response.status shouldBe BadRequest
       }
     }
 
     s"return 200/WindComponent from GET:/conversions/windcomponent?windspeed=10&winddirection=260&heading=200" in {
-      Get("/conversions/windcomponent?windspeed=10&winddirection=260&heading=200") ~> convRoute ~> check {
+      Get(
+        "/conversions/windcomponent?windspeed=10&winddirection=260&heading=200"
+      ) ~> convRoute ~> check {
         response.status shouldBe OK
         val expected: WindComponent = windComponents(10, 260, 200)
         val actual: WindComponent = entityAsType(classOf[WindComponent])
@@ -87,7 +91,8 @@ class ConversionControllerSpec extends BaseSpec with ConversionUtility {
     }
 
     s"return 400/ BadRequest from GET:/conversions/windcomponent?windspeed=ws&winddirection=wd&heading=h" in {
-      Get("/conversions/windcomponent?windspeed=ws&winddirection=wd&heading=h") ~> Route.seal(convRoute) ~> check {
+      Get("/conversions/windcomponent?windspeed=ws&winddirection=wd&heading=h") ~> Route
+        .seal(convRoute) ~> check {
         response.status shouldBe BadRequest
       }
     }

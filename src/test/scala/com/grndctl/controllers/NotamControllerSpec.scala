@@ -25,10 +25,7 @@ class NotamControllerSpec extends BaseSpec {
   val invalidFormatType: String = "INTL"
 
   val validNotamSeq: Seq[String] =
-    OM.readValue(
-      validNotamSeqStr,
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[String]], classOf[String])
-    ).asInstanceOf[java.util.List[String]].asScala
+    strToSeqOfType(validNotamSeqStr, classOf[String])
 
   s"return 200/[String] from GET:/notam?code=$notamStation" in {
     validNotamRouteRequest()
@@ -42,7 +39,9 @@ class NotamControllerSpec extends BaseSpec {
 
   s"return 200/[String] from GET:/notam?code=$notamStation&reportType=$validReportType&formatType=$validFormatType" in {
     validNotamRouteRequest()
-    Get(s"/notam?code=$notamStation&reportType=$validReportType&formatType=$validFormatType") ~> notamRoute ~> check {
+    Get(
+      s"/notam?code=$notamStation&reportType=$validReportType&formatType=$validFormatType"
+    ) ~> notamRoute ~> check {
       response.status shouldBe OK
       val expected: Seq[String] = validNotamSeq
       val actual: Seq[String] = entityAsSeqType(classOf[String])
@@ -52,7 +51,11 @@ class NotamControllerSpec extends BaseSpec {
 
   s"return 404/ Not Found from GET:/notam?code=FAKE" in {
     (notamSvc.getNotamsForCodes _)
-      .expects(Seq("FAKE"), ReportType.fromString(validReportType), FormatType.fromString(validFormatType))
+      .expects(
+        Seq("FAKE"),
+        ReportType.fromString(validReportType),
+        FormatType.fromString(validFormatType)
+      )
       .returning(Future(Seq.empty))
     Get(s"/notam?code=FAKE") ~> notamRoute ~> check {
       response.status shouldBe NotFound
@@ -64,9 +67,14 @@ class NotamControllerSpec extends BaseSpec {
 //    Get(s"/notam?code=$notamStation&reportType=$invalidReportType") ~> notamRoute ~> check {
 //      response.status shouldBe BadRequest
 
-  def validNotamRouteRequest(): CallHandler3[Seq[String], ReportType, FormatType, Future[Seq[String]]] = {
+  def validNotamRouteRequest()
+      : CallHandler3[Seq[String], ReportType, FormatType, Future[Seq[String]]] = {
     (notamSvc.getNotamsForCodes _)
-      .expects(Seq(notamStation), ReportType.fromString(validReportType), FormatType.fromString(validFormatType))
+      .expects(
+        Seq(notamStation),
+        ReportType.fromString(validReportType),
+        FormatType.fromString(validFormatType)
+      )
       .returning(Future(validNotamSeq))
   }
 

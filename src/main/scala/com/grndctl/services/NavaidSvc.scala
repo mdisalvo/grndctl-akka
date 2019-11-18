@@ -12,9 +12,11 @@ import scala.io.Source
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-class NavaidSvc(identNavaidMap: Map[String, Seq[Navaid]],
-                stationNavaidMap: Map[String, Seq[Navaid]])
-               (implicit ec: ExecutionContext) extends LazyLogging {
+class NavaidSvc(
+    identNavaidMap: Map[String, Seq[Navaid]],
+    stationNavaidMap: Map[String, Seq[Navaid]]
+)(implicit ec: ExecutionContext)
+    extends LazyLogging {
 
   def getAllNavaidsByIdent: Future[Map[String, Seq[Navaid]]] =
     Future.successful(identNavaidMap)
@@ -43,38 +45,48 @@ object NavaidSvc extends AutoClose {
             case 2 => n.setIdent(elem._1.replaceAll("\"", ""))
             case 3 => n.setName(elem._1.replaceAll("\"", ""))
             case 4 => n.setType(elem._1.replaceAll("\"", ""))
-            case 5 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setFrequencyKhz(elem._1.replaceAll("\"", "").toInt)
-            }
-            case 6 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setLatitudeDeg(elem._1.replaceAll("\"", "").toDouble)
-            }
-            case 7 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setLongitudeDeg(elem._1.replaceAll("\'", "'").toDouble)
-            }
-            case 8 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setElevationFt(elem._1.replaceAll("\"", "").toInt)
-            }
+            case 5 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setFrequencyKhz(elem._1.replaceAll("\"", "").toInt)
+              }
+            case 6 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setLatitudeDeg(elem._1.replaceAll("\"", "").toDouble)
+              }
+            case 7 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setLongitudeDeg(elem._1.replaceAll("\'", "'").toDouble)
+              }
+            case 8 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setElevationFt(elem._1.replaceAll("\"", "").toInt)
+              }
             case 9 => n.setIsoCountry(elem._1.replaceAll("\'", ""))
-            case 10 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setDmeFrequencyKhz(elem._1.replaceAll("\"", "").toInt)
-            }
+            case 10 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setDmeFrequencyKhz(elem._1.replaceAll("\"", "").toInt)
+              }
             case 11 => n.setDmeChannel(elem._1.replaceAll("\"", ""))
-            case 12 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setDmeLatitudeDeg(elem._1.replaceAll("\"", "").toDouble)
-            }
-            case 13 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setDmeLongitudeDeg(elem._1.replaceAll("\"", "").toDouble)
-            }
-            case 14 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setDmeElevationFt(elem._1.replaceAll("\"", "").toInt)
-            }
-            case 15 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setSlavedVariationDeg(elem._1.replaceAll("\"", "").toDouble)
-            }
-            case 16 => if (!Strings.isNullOrEmpty(elem._1)) {
-              n.setMagneticVariationDeg(elem._1.replaceAll("\"", "").toDouble)
-            }
+            case 12 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setDmeLatitudeDeg(elem._1.replaceAll("\"", "").toDouble)
+              }
+            case 13 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setDmeLongitudeDeg(elem._1.replaceAll("\"", "").toDouble)
+              }
+            case 14 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setDmeElevationFt(elem._1.replaceAll("\"", "").toInt)
+              }
+            case 15 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setSlavedVariationDeg(elem._1.replaceAll("\"", "").toDouble)
+              }
+            case 16 =>
+              if (!Strings.isNullOrEmpty(elem._1)) {
+                n.setMagneticVariationDeg(elem._1.replaceAll("\"", "").toDouble)
+              }
             case 17 => n.setUsageType(elem._1.replaceAll("\'", ""))
             case 18 => n.setPower(elem._1.replaceAll("\"", ""))
             case 19 => n.setAssociatedAirport(elem._1.replaceAll("\"", ""))

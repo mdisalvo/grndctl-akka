@@ -11,10 +11,12 @@ import scala.io.Source
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-class AirlineSvc(airlineList:    Seq[Airline],
-                 icaoAirlineMap: Map[String, Airline],
-                 iataAirlineMap: Map[String, Airline])
-                (implicit ec: ExecutionContext) extends LazyLogging {
+class AirlineSvc(
+    airlineList: Seq[Airline],
+    icaoAirlineMap: Map[String, Airline],
+    iataAirlineMap: Map[String, Airline]
+)(implicit ec: ExecutionContext)
+    extends LazyLogging {
 
   def getAirlineByIcao(station: String): Future[Option[Airline]] =
     Future.successful(icaoAirlineMap.get(station).orElse(None))
@@ -32,12 +34,12 @@ class AirlineSvc(airlineList:    Seq[Airline],
 object AirlineSvc extends AutoClose {
 
   def apply(implicit ec: ExecutionContext): AirlineSvc = {
-    var airlineList:    Seq[Airline] = Seq.empty
+    var airlineList: Seq[Airline] = Seq.empty
     var icaoAirlineMap: Map[String, Airline] = Map.empty
     var iataAirlineMap: Map[String, Airline] = Map.empty
 
     autoClose(Source.fromResource("airlines.dat.txt")) { bs =>
-      for(line <- bs.getLines()) {
+      for (line <- bs.getLines()) {
         val a: Airline = new Airline
         line.split(",").map(_.trim).zipWithIndex.foreach { elem =>
           elem._2 match {

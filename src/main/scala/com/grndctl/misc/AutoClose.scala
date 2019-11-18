@@ -6,7 +6,7 @@ package com.grndctl.misc
   */
 trait AutoClose {
 
-  def autoClose[A <: AutoCloseable,B](closeable: A)(func: A => B): B = {
+  def autoClose[A <: AutoCloseable, B](closeable: A)(func: A => B): B = {
     try {
       func(closeable)
     } finally {

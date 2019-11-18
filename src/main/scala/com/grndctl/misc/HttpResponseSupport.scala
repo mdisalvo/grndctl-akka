@@ -1,6 +1,11 @@
 package com.grndctl.misc
 
-import akka.http.scaladsl.model.{ContentType, HttpEntity, HttpResponse, MediaTypes}
+import akka.http.scaladsl.model.{
+  ContentType,
+  HttpEntity,
+  HttpResponse,
+  MediaTypes
+}
 import com.fasterxml.jackson.databind.ObjectMapper
 
 import scala.collection.JavaConverters._
@@ -29,7 +34,9 @@ trait HttpResponseSupport {
     )
   }
 
-  def seqMultiMapToHttpResponse[T <: Object, U <: Object](m: Map[T, Seq[U]]): HttpResponse = {
+  def seqMultiMapToHttpResponse[T <: Object, U <: Object](
+      m: Map[T, Seq[U]]
+  ): HttpResponse = {
     HttpResponse(
       entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),

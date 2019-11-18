@@ -8,7 +8,6 @@ import com.grndctl.services.MetarSvc
 
 import scala.concurrent.Future
 
-
 /**
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
@@ -54,7 +53,8 @@ class MetarControllerSpec extends BaseSpec {
         .expects("XXXX", hrsBefore)
         .returning(Future(Seq.empty))
       Get(s"/metar/XXXX?hrsBefore=$hrsBefore") ~> Route.seal(metarRoute) ~> check {
-        val expected: String = "Station with ICAO id XXXX?hrsBefore=3.0 Not Found"
+        val expected: String =
+          "Station with ICAO id XXXX?hrsBefore=3.0 Not Found"
         val actual: String = responseAs[String]
         response.status shouldBe NotFound
         expected shouldEqual actual

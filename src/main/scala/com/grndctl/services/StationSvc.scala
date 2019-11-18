@@ -17,7 +17,8 @@ import scala.concurrent.{ExecutionContext, Future}
   * michael.vincent.disalvo@gmail.com
   */
 class StationSvc(implicit ec: ExecutionContext)
-  extends InputStreamUnmarshaller[station.Response](classOf[station.Response]) with LazyLogging {
+    extends InputStreamUnmarshaller[station.Response](classOf[station.Response])
+    with LazyLogging {
 
   private val AddsRqstUrl = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=stations" +
     "&requesttype=retrieve&format=xml"
@@ -41,7 +42,12 @@ class StationSvc(implicit ec: ExecutionContext)
     val url: URL = new URL(FaaRqstUrl + iataCode)
     Future {
       autoClose(new InputStreamReader(url.openStream())) { isr =>
-        Option(OM.readValue(CharStreams.toString(isr).getBytes(), classOf[FaaStation]))
+        Option(
+          OM.readValue(
+            CharStreams.toString(isr).getBytes(),
+            classOf[FaaStation]
+          )
+        )
       }
     }.recover {
       case e: Exception =>

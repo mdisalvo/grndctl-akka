@@ -15,12 +15,15 @@ import scala.concurrent.{ExecutionContext, Future}
   * michael.vincent.disalvo@gmail.com
   */
 class TafSvc(implicit ec: ExecutionContext)
-  extends InputStreamUnmarshaller[taf.Response](classOf[taf.Response]) with LazyLogging {
+    extends InputStreamUnmarshaller[taf.Response](classOf[taf.Response])
+    with LazyLogging {
 
-  private val RequestUrl: String = "https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs" +
-    "&requestType=retrieve&format=xml"
+  private val RequestUrl: String =
+    "https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs" +
+      "&requestType=retrieve&format=xml"
 
-  private val MostRecentConstraint: String = "&mostRecentForEachStation=constraint"
+  private val MostRecentConstraint: String =
+    "&mostRecentForEachStation=constraint"
 
   private val StationString: String = "&stationString="
 
@@ -28,17 +31,17 @@ class TafSvc(implicit ec: ExecutionContext)
 
   private val TimeType: String = "&timeType="
 
-  /**
-    *
-    *
-    * @param stationId
-    * @param hrsBefore
-    * @param timeType
-    * @return
-    */
-  def getTafs(stationId: String, hrsBefore: Double, timeType: TimeType): Future[Seq[TAF]] = {
-    unmarshall(new URL(RequestUrl + StationString + stationId + HrsBefore + hrsBefore + TimeType + timeType.valueOf()))
-      .map(_.getData.getTAF.asScala)
+  def getTafs(
+      stationId: String,
+      hrsBefore: Double,
+      timeType: TimeType
+  ): Future[Seq[TAF]] = {
+    unmarshall(
+      new URL(
+        RequestUrl + StationString + stationId + HrsBefore + hrsBefore + TimeType + timeType
+          .valueOf()
+      )
+    ).map(_.getData.getTAF.asScala)
       .recover {
         case e: Exception =>
           logger.error(ErrorMessage, e)
