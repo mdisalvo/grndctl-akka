@@ -9,6 +9,7 @@ import akka.http.scaladsl.model.{
 import com.fasterxml.jackson.databind.ObjectMapper
 
 import scala.collection.JavaConverters._
+import akka.util.ByteString
 
 /**
   * I realize that this is an unorthodox way to go about my business.
@@ -25,22 +26,24 @@ trait HttpResponseSupport {
 
   val OM: ObjectMapper = new ObjectMapper
 
-  def seqToHttpResponse[T <: Object](s: Seq[T]): HttpResponse = {
+  def seqToHttpResponse[T <: Any](s: Seq[T]): HttpResponse = {
     HttpResponse(
       entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
-        OM.writeValueAsString(s.asJava)
+        ByteString.apply(OM.writeValueAsString(s.asJava))
       )
     )
   }
 
-  def seqMultiMapToHttpResponse[T <: Object, U <: Object](
+  def seqMultiMapToHttpResponse[T <: Any, U <: Any](
       m: Map[T, Seq[U]]
   ): HttpResponse = {
     HttpResponse(
       entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
-        OM.writeValueAsString(m.map(e => e._1 -> e._2.asJava).asJava)
+        ByteString.apply(
+          OM.writeValueAsString(m.map(e => e._1 -> e._2.asJava).asJava)
+        )
       )
     )
   }
@@ -49,7 +52,7 @@ trait HttpResponseSupport {
     HttpResponse(
       entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
-        OM.writeValueAsString(o)
+        ByteString.apply(OM.writeValueAsString(o))
       )
     )
   }
