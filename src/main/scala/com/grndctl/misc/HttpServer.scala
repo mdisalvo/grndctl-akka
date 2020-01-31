@@ -9,6 +9,7 @@ import com.typesafe.scalalogging.LazyLogging
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 import scala.util.{Failure, Success}
+import akka.stream.Materializer
 
 /**
   * @author Michael Di Salvo
@@ -16,7 +17,7 @@ import scala.util.{Failure, Success}
   */
 class HttpServer(routes: Route, interface: String, port: Int)
                 (implicit val actorSystem: ActorSystem,
-                 implicit val materializer: ActorMaterializer,
+                 implicit val materializer: Materializer,
                  implicit val executor: ExecutionContextExecutor) extends LazyLogging {
 
   var serverBinding: Future[ServerBinding] = _
