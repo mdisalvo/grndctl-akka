@@ -5,7 +5,8 @@ val logbackCore = "ch.qos.logback" % "logback-core" % "1.2.3"
 val config = "com.typesafe" % "config" % "1.4.0"
 val apacheCommons = "org.apache.commons" % "commons-lang3" % "3.9"
 val guava = "com.google.guava" % "guava" % "28.2-jre"
-val common: Seq[ModuleID] = Seq(log, logbackClassic, logbackCore, config, apacheCommons, guava)
+val common: Seq[ModuleID] =
+  Seq(log, logbackClassic, logbackCore, config, apacheCommons, guava)
 
 // Akka/HTTP
 val akkaHttp = "com.typesafe.akka" %% "akka-http" % "10.1.11"
@@ -16,7 +17,8 @@ val jackson = "com.fasterxml.jackson.core" % "jackson-databind" % "2.10.2"
 val json = "org.json" % "json" % "20190722"
 val jsoup = "org.jsoup" % "jsoup" % "1.12.1"
 
-val akka: Seq[ModuleID] = Seq(akkaHttp, akkaActor, akkaStream, testKit, jackson, json, jsoup)
+val akka: Seq[ModuleID] =
+  Seq(akkaHttp, akkaActor, akkaStream, testKit, jackson, json, jsoup)
 
 // Test
 val scalatest = "org.scalatest" %% "scalatest" % "3.1.0" % Test
@@ -33,12 +35,18 @@ dockerUpdateLatest := true
 lazy val grndctl = (project in file("."))
   .settings(
     organization := "com.grndctl",
-    version := "1.0.3-SNAPSHOT",
+    version := "1.0.3",
     name := "grndctl-akka",
     description := """An Aviators API""",
     scalaVersion := "2.12.10",
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature"),
     libraryDependencies ++= common ++ akka ++ test
-  ).enablePlugins(JavaAppPackaging)
+  )
+  .enablePlugins(JavaAppPackaging)
+
+assemblyMergeStrategy in assembly := {
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+  case x                             => MergeStrategy.first
+}
 
 mainClass in Compile := Some("com.grndctl.Grndctl")
