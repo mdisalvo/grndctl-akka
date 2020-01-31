@@ -1,3 +1,4 @@
+project/metals.sbt
 .cache
 .lib/
 .dist/*
