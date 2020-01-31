@@ -5,41 +5,53 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.typesafe.scalalogging.LazyLogging
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.concurrent.ScalaFutures
-import org.scalatest.{Matchers, WordSpec}
-import scala.collection.JavaConverters._
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
+import scala.collection.JavaConverters._
 import scala.concurrent.duration._
 
 /**
   * @author Michael Di Salvo
   * michael.vincent.disalvo@gmail.com
   */
-trait BaseSpec extends WordSpec
-  with Matchers
-  with ScalatestRouteTest
-  with MockFactory
-  with ScalaFutures
-  with LazyLogging {
+trait BaseSpec
+    extends AnyWordSpec
+    with Matchers
+    with ScalatestRouteTest
+    with MockFactory
+    with ScalaFutures
+    with LazyLogging {
 
   private val timeout = 5.seconds
 
   val OM: ObjectMapper = new ObjectMapper
 
-  def entityAsType[T <: Object](clazz: Class[T]): T = OM.readValue(entityAs[String], clazz)
+  def entityAsType[T <: Object](clazz: Class[T]): T =
+    OM.readValue(entityAs[String], clazz)
 
   def entityAsSeqType[T <: Object](clazz: Class[T]): Seq[T] =
     OM.readValue(
-      entityAs[String],
-      OM.getTypeFactory.constructCollectionType(classOf[java.util.List[T]], clazz)
-    ).asInstanceOf[java.util.List[T]].asScala
+        entityAs[String],
+        OM.getTypeFactory
+          .constructCollectionType(classOf[java.util.List[T]], clazz)
+      )
+      .asInstanceOf[java.util.List[T]]
+      .asScala
 
   def entityAsMapType[T <: Object](clazz: Class[T]): Map[String, Seq[T]] =
     OM.readValue(
-      entityAs[String],
-      OM.getTypeFactory.constructMapType(
-        classOf[java.util.Map[String, java.util.List[T]]], classOf[String], classOf[java.util.List[T]]
+        entityAs[String],
+        OM.getTypeFactory.constructMapType(
+          classOf[java.util.Map[String, java.util.List[T]]],
+          classOf[String],
+          classOf[java.util.List[T]]
+        )
       )
-    ).asInstanceOf[java.util.Map[String, java.util.List[T]]].asScala.map(e => (e._1, e._2.asScala)).toMap
+      .asInstanceOf[java.util.Map[String, java.util.List[T]]]
+      .asScala
+      .map(e => (e._1, e._2.asScala))
+      .toMap
 
   val validMetarStr: String =
     """

@@ -49,4 +49,6 @@ assemblyMergeStrategy in assembly := {
   case x                             => MergeStrategy.first
 }
 
+scalacOptions ++= Seq("-deprecation", "-feature")
+
 mainClass in Compile := Some("com.grndctl.Grndctl")
