@@ -1,7 +1,6 @@
 package com.grndctl
 
 import akka.actor.ActorSystem
-import akka.stream.ActorMaterializer
 import com.grndctl.misc.{Config, Registry}
 import com.typesafe.scalalogging.LazyLogging
 
@@ -22,7 +21,6 @@ class Grndctl(registry: Registry) {
 object Grndctl extends LazyLogging {
   def main(args: Array[String]): Unit = {
     implicit val actorSystem: ActorSystem = ActorSystem("grndctl")
-    implicit val materializer: ActorMaterializer = ActorMaterializer()
     implicit val executor: ExecutionContextExecutor = actorSystem.dispatcher
 
     val registry = new Registry(new Config())
