@@ -10,3 +10,6 @@
 ##### Test It Out:
 - `docker run -p {container_port}:{host_port} {docker_image_id}`
 - Open a browser and visit: `localhost:{host_port}/index.html`
+###### *OR*
+- `sbt run`
+- Open a browser and visit: `localhost:8080/index.html`
