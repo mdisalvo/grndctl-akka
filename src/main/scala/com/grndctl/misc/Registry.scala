@@ -38,10 +38,6 @@ class Registry(config: Config)(
 
   lazy val conversionController: ConversionController = new ConversionController
 
-  lazy val chartsService: ChartsSvc = new ChartsSvc()(svcContext)
-  lazy val chartsController: ChartsController =
-    new ChartsController(chartsService)(httpContext)
-
   val airlineService: AirlineSvc = AirlineSvc.apply(svcContext)
   lazy val airlineController: AirlineController =
     new AirlineController(airlineService)(httpContext)
@@ -64,7 +60,6 @@ class Registry(config: Config)(
         tafController.route ~
         airepController.route ~
         conversionController.route ~
-        chartsController.route ~
         airlineController.route ~
         navaidController.route ~
         notamController.route ~

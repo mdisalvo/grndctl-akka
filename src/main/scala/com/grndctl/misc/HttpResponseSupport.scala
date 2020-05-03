@@ -20,31 +20,22 @@ trait HttpResponseSupport {
 
   val OM: ObjectMapper = new ObjectMapper
 
-  def seqToHttpResponse[T <: Object](s: Seq[T]): HttpResponse = {
-    HttpResponse(
-      entity = HttpEntity(
+  def seqToHttpResponse[T <: Object](s: Seq[T]): HttpResponse =
+    HttpResponse(entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
         OM.writeValueAsString(s.asJava)
-      )
-    )
-  }
+      ))
 
-  def seqMultiMapToHttpResponse[T <: Object, U <: Object](m: Map[T, Seq[U]]): HttpResponse = {
-    HttpResponse(
-      entity = HttpEntity(
+  def seqMultiMapToHttpResponse[T <: Object, U <: Object](m: Map[T, Seq[U]]): HttpResponse =
+    HttpResponse(entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
         OM.writeValueAsString(m.map(e => e._1 -> e._2.asJava).asJava)
-      )
-    )
-  }
+      ))
 
-  def anyToHttpResponse(o: Any): HttpResponse = {
-    HttpResponse(
-      entity = HttpEntity(
+  def anyToHttpResponse(o: Any): HttpResponse =
+    HttpResponse(entity = HttpEntity(
         ContentType(MediaTypes.`application/json`),
         OM.writeValueAsString(o)
-      )
-    )
-  }
+      ))
 
 }

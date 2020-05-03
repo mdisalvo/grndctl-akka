@@ -33,7 +33,7 @@ class MetarSvc(implicit ec: ExecutionContext)
       .map(_.getData.getMETAR.asScala)
       .recover {
         case e: Exception =>
-          logger.error(ErrorMessage)
+          logger.error(ErrorMessage, e)
           Seq.empty
       }
   }
