@@ -10,8 +10,6 @@
 | `GET: /airline/icao/{icaoCode}` | Get Airline by ICAO code | - | Airline | GET /airline/icao/UAL | 200::OK <br> 404::NotFound |
 | `GET: /airline/iata/{iataCode}` | Get Airline by IATA code | - | Airline | GET /airline/iata/UA | 200::OK <br> 404::NotFound |
 | `GET: /airline/active` | Get active Airlines | - | [Airline] | GET /airline/active | 200::OK |
-|*__Charts__* | | | | |
-| `GET: /charts/{icaoCode}` | Get charts by ICAO code (returns a stringified JSON array) | - | String | GET /charts/KDEN | 200::OK <br> 404::NotFound |
 |*__Conversions__* | | | | |
 | `GET: /conversions/FtoC` | Convert temp F to temp C | tempF(r)::double | ConversionResult | GET /conversions/FtoC?tempF=98.6 | 200::OK <br> 400::BadRequest |
 | `GET: /conversions/CtoF` | Convert temp C to tempF | tempC(r)::double | ConversionResult | GET /conversions/CtoF?tempC=0 | 200::OK <br> 400::BadRequest |
